@@ -1,0 +1,512 @@
+@charset "UTF-8";
+
+/* ========================================
+   기본 설정
+======================================== */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	position: relative;
+
+	padding: 30px 35px;
+
+	background: #111820;
+	color: #e8edf2;
+
+	font-family: "Malgun Gothic", "Noto Sans KR", sans-serif;
+
+	overflow-y: auto;
+}
+
+
+/* ========================================
+   제목
+======================================== */
+
+.title {
+	margin-bottom: 5px;
+
+	font-size: 28px;
+	font-weight: bold;
+	letter-spacing: 2px;
+
+	color: #edf1f5;
+}
+
+.sub-title {
+	margin-bottom: 25px;
+
+	font-size: 14px;
+	font-weight: normal;
+	letter-spacing: 1px;
+
+	color: #8995a1;
+}
+
+
+/* ========================================
+   전체 사용자 / 게임 성공 / 게임 실패
+======================================== */
+
+.total-users-frame,
+.successful-frame,
+.failed-frame {
+	display: inline-block;
+
+	width: 30%;
+	height: 120px;
+
+	padding: 20px;
+
+	margin-right: 2.5%;
+
+	vertical-align: top;
+
+	background: rgba(30, 38, 48, 0.9);
+
+	border: 1px solid rgba(150, 165, 180, 0.2);
+	border-radius: 5px;
+
+	box-shadow:
+		0 5px 15px rgba(0, 0, 0, 0.25),
+		inset 0 0 15px rgba(255, 255, 255, 0.02);
+}
+
+.failed-frame {
+	margin-right: 0;
+}
+
+
+/* 프레임 제목 */
+
+.total-users-frame label:first-child,
+.successful-frame label:first-child,
+.failed-frame label:first-child {
+	font-size: 14px;
+
+	color: #929da8;
+}
+
+
+/* 숫자 */
+
+.total-users-frame label:last-child,
+.successful-frame label:last-child,
+.failed-frame label:last-child {
+	display: inline-block;
+
+	margin-top: 10px;
+
+	font-size: 30px;
+	font-weight: bold;
+
+	color: #edf2f6;
+}
+
+
+/* ========================================
+   최근 접속 사용자 프레임
+======================================== */
+
+.recent-users-frame {
+	display: inline-block;
+
+	width: 30%;
+	height: 310px;
+
+	margin-top: 25px;
+	margin-right: 2.5%;
+
+	padding: 20px;
+
+	vertical-align: top;
+
+	background: rgba(30, 38, 48, 0.9);
+
+	border: 1px solid rgba(150, 165, 180, 0.2);
+	border-radius: 5px;
+
+	box-shadow:
+		0 5px 15px rgba(0, 0, 0, 0.25),
+		inset 0 0 15px rgba(255, 255, 255, 0.02);
+
+	overflow: hidden;
+}
+
+
+/* 제목 */
+
+.recent-users-frame > label {
+	display: block;
+
+	margin-bottom: 15px;
+
+	font-size: 16px;
+	font-weight: bold;
+	letter-spacing: 1px;
+
+	color: #e5ebf0;
+}
+
+
+/* ========================================
+   최근 접속 사용자 테이블
+======================================== */
+
+.recent-users-frame table {
+	width: 100%;
+
+	border-collapse: collapse;
+
+	table-layout: fixed;
+}
+
+.recent-users-frame tr:first-child {
+	background: rgba(255, 255, 255, 0.04);
+}
+
+.recent-users-frame td {
+	height: 35px;
+
+	padding: 5px 8px;
+
+	border-bottom: 1px solid rgba(150, 165, 180, 0.1);
+
+	font-size: 13px;
+
+	color: #cbd3da;
+
+	text-align: left;
+}
+
+.recent-users-frame tr:first-child td {
+	height: 35px;
+
+	font-size: 12px;
+	font-weight: bold;
+
+	color: #8995a1;
+
+	border-bottom: 1px solid rgba(150, 165, 180, 0.2);
+}
+
+.recent-users-frame td:first-child {
+	width: 60%;
+}
+
+.recent-users-frame td:last-child {
+	width: 40%;
+
+	text-align: center;
+}
+
+
+/* 마우스 오버 */
+
+.recent-users-frame tr:not(:first-child):hover {
+	background: rgba(255, 255, 255, 0.04);
+}
+
+
+/* ========================================
+   최근 게임 기록 프레임
+======================================== */
+
+.recent-game-records {
+	display: inline-block;
+
+	width: 62.5%;
+	height: 310px;
+
+	margin-top: 25px;
+
+	padding: 20px;
+
+	vertical-align: top;
+
+	background: rgba(30, 38, 48, 0.9);
+
+	border: 1px solid rgba(150, 165, 180, 0.2);
+	border-radius: 5px;
+
+	box-shadow:
+		0 5px 15px rgba(0, 0, 0, 0.25),
+		inset 0 0 15px rgba(255, 255, 255, 0.02);
+
+	overflow-x: auto;
+	overflow-y: hidden;
+}
+
+
+/* 제목 */
+
+.recent-game-records > label {
+	display: block;
+
+	margin-bottom: 15px;
+
+	font-size: 16px;
+	font-weight: bold;
+	letter-spacing: 1px;
+
+	color: #e5ebf0;
+}
+
+
+/* ========================================
+   최근 게임 기록 테이블
+======================================== */
+
+.recent-game-records table {
+	width: 100%;
+	min-width: 580px;
+
+	border-collapse: collapse;
+
+	table-layout: fixed;
+}
+
+.recent-game-records tr:first-child {
+	background: rgba(255, 255, 255, 0.04);
+}
+
+.recent-game-records td {
+	height: 35px;
+
+	padding: 5px 7px;
+
+	border-bottom: 1px solid rgba(150, 165, 180, 0.1);
+
+	font-size: 12px;
+
+	color: #cbd3da;
+
+	text-align: center;
+
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.recent-game-records tr:first-child td {
+	height: 35px;
+
+	font-size: 11px;
+	font-weight: bold;
+
+	color: #8995a1;
+
+	border-bottom: 1px solid rgba(150, 165, 180, 0.2);
+}
+
+
+/* ========================================
+   최근 게임 기록 열 크기
+======================================== */
+
+.recent-game-records td:nth-child(1) {
+	width: 13%;
+}
+
+.recent-game-records td:nth-child(2) {
+	width: 18%;
+}
+
+.recent-game-records td:nth-child(3) {
+	width: 15%;
+}
+
+.recent-game-records td:nth-child(4) {
+	width: 21%;
+}
+
+.recent-game-records td:nth-child(5) {
+	width: 15%;
+}
+
+.recent-game-records td:nth-child(6) {
+	width: 10%;
+}
+
+
+/* 마우스 오버 */
+
+.recent-game-records tr:not(:first-child):hover {
+	background: rgba(255, 255, 255, 0.04);
+}
+
+
+/* ========================================
+   스크롤바
+======================================== */
+
+::-webkit-scrollbar {
+	width: 7px;
+	height: 7px;
+}
+
+::-webkit-scrollbar-track {
+	background: rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb {
+	background: rgba(130, 145, 160, 0.35);
+
+	border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: rgba(150, 165, 180, 0.5);
+}
+
+
+/* ========================================
+   1000px 이하
+======================================== */
+
+@media (max-width: 1000px) {
+
+	body {
+		padding: 25px;
+	}
+
+	.total-users-frame,
+	.successful-frame,
+	.failed-frame {
+		width: 30%;
+		margin-right: 2.5%;
+	}
+
+	.failed-frame {
+		margin-right: 0;
+	}
+
+	.recent-users-frame {
+		width: 30%;
+		margin-right: 2.5%;
+	}
+
+	.recent-game-records {
+		width: 62.5%;
+	}
+
+}
+
+
+/* ========================================
+   750px 이하
+======================================== */
+
+@media (max-width: 750px) {
+
+	body {
+		padding: 20px;
+	}
+
+	.title {
+		font-size: 24px;
+	}
+
+	.sub-title {
+		margin-bottom: 20px;
+	}
+
+	.total-users-frame,
+	.successful-frame,
+	.failed-frame {
+		display: block;
+
+		width: 100%;
+		height: 90px;
+
+		margin-right: 0;
+		margin-bottom: 10px;
+	}
+
+	.total-users-frame label:last-child,
+	.successful-frame label:last-child,
+	.failed-frame label:last-child {
+		font-size: 25px;
+	}
+
+	.recent-users-frame,
+	.recent-game-records {
+		display: block;
+
+		width: 100%;
+
+		margin-right: 0;
+		margin-top: 15px;
+	}
+
+	.recent-users-frame {
+		height: 270px;
+	}
+
+	.recent-game-records {
+		height: 310px;
+	}
+
+}
+
+
+/* ========================================
+   500px 이하
+======================================== */
+
+@media (max-width: 500px) {
+
+	body {
+		padding: 15px;
+	}
+
+	.title {
+		font-size: 21px;
+	}
+
+	.sub-title {
+		font-size: 12px;
+	}
+
+	.total-users-frame,
+	.successful-frame,
+	.failed-frame {
+		height: 80px;
+
+		padding: 15px;
+	}
+
+	.total-users-frame label:first-child,
+	.successful-frame label:first-child,
+	.failed-frame label:first-child {
+		font-size: 12px;
+	}
+
+	.total-users-frame label:last-child,
+	.successful-frame label:last-child,
+	.failed-frame label:last-child {
+		font-size: 22px;
+	}
+
+	.recent-users-frame,
+	.recent-game-records {
+		padding: 15px;
+	}
+
+	.recent-users-frame > label,
+	.recent-game-records > label {
+		font-size: 14px;
+	}
+
+}

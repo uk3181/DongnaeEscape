@@ -1,0 +1,582 @@
+@charset "UTF-8";
+
+* {
+	box-sizing: border-box;
+}
+
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+
+body {
+	position: relative;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	overflow: hidden;
+
+	background-image:
+		linear-gradient(
+			rgba(3, 10, 20, 0.55),
+			rgba(3, 10, 20, 0.72)
+		),
+		url("../assets/images/backgrounds/main_theme_background.jpg");
+
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+
+	color: #ffffff;
+
+	font-family: "Noto Sans KR", sans-serif;
+}
+
+
+body::before {
+	content: "";
+
+	position: absolute;
+	inset: 0;
+
+	background:
+		linear-gradient(
+			to right,
+			rgba(0, 0, 0, 0.45),
+			transparent 20%,
+			transparent 80%,
+			rgba(0, 0, 0, 0.45)
+		);
+
+	pointer-events: none;
+}
+
+
+body::after {
+	content: "";
+
+	position: absolute;
+
+	inset: 18px;
+
+	border: 1px solid rgba(120, 190, 255, 0.18);
+
+	pointer-events: none;
+}
+
+
+/* ================================
+   게임 제목
+   ================================ */
+
+.game-title {
+	position: relative;
+	z-index: 2;
+
+	margin-bottom: 8px;
+
+	font-size: 24px;
+	font-weight: 400;
+
+	letter-spacing: 7px;
+
+	color: rgba(235, 245, 255, 0.9);
+}
+
+
+/* ================================
+   게임 부제목
+   ================================ */
+
+.game-subtitle {
+	position: relative;
+	z-index: 2;
+
+	margin-bottom: 22px;
+
+	font-size: clamp(65px, 8vw, 110px);
+	font-weight: 800;
+
+	letter-spacing: 18px;
+
+	color: #ffffff;
+
+	text-shadow:
+		0 0 20px rgba(100, 190, 255, 0.25);
+}
+
+
+/* ================================
+   게임 설명
+   ================================ */
+
+.game-description {
+	position: relative;
+	z-index: 2;
+
+	margin-bottom: 30px;
+
+	font-size: 15px;
+	font-weight: 300;
+
+	letter-spacing: 3px;
+
+	color: rgba(225, 240, 255, 0.8);
+
+	text-align: center;
+}
+
+
+/* ================================
+   1365 ID 레이블
+   ================================ */
+
+.id-label {
+	position: relative;
+	z-index: 2;
+
+	transform: translate(-185px, 30px);
+
+	line-height: 38px;
+
+	margin-bottom: -38px;
+
+	font-size: 17px;
+	font-weight: 400;
+
+	letter-spacing: 2px;
+
+	color: rgba(225, 240, 255, 0.9);
+
+	white-space: nowrap;
+
+	text-align: right;
+
+	pointer-events: none;
+}
+
+
+/* ================================
+   1365 ID 입력창
+   ================================ */
+
+body > input[name="id"] {
+	position: relative;
+	z-index: 2;
+
+	width: 280px;
+	height: 38px;
+
+	transform: translateY(30px);
+
+	margin: 0 0 25px 0;
+
+	padding: 0 14px;
+
+	background: rgba(5, 15, 30, 0.75);
+
+	border: 1px solid rgba(80, 180, 255, 0.55);
+	border-radius: 2px;
+
+	color: #ffffff;
+
+	font-size: 14px;
+	font-family: inherit;
+
+	text-align: center;
+
+	outline: none;
+
+	transition:
+		border-color 0.2s ease,
+		box-shadow 0.2s ease,
+		background 0.2s ease;
+}
+
+
+body > input[name="id"]:focus {
+	border-color: rgba(100, 200, 255, 0.9);
+
+	background: rgba(5, 18, 35, 0.9);
+
+	box-shadow:
+		0 0 12px rgba(80, 180, 255, 0.18);
+}
+
+
+/* ================================
+   게임 시작 버튼
+   ================================ */
+
+body > .start-button {
+	position: relative;
+	z-index: 2;
+
+	width: 280px;
+	height: 68px;
+
+	padding: 0;
+
+	/* 기존 위치 그대로 */
+	transform: translateY(50px);
+
+	background: rgba(5, 15, 30, 0.72);
+
+	border: 1px solid rgba(90, 180, 255, 0.55);
+	border-radius: 2px;
+
+	color: #ffffff;
+
+	font-size: 16px;
+	font-weight: 400;
+
+	letter-spacing: 4px;
+
+	cursor: pointer;
+
+	transition:
+		background 0.25s ease,
+		border-color 0.25s ease,
+		transform 0.25s ease,
+		box-shadow 0.25s ease;
+}
+
+
+/* 왼쪽 파란색 라인 */
+
+body > .start-button::before {
+	content: "";
+
+	position: absolute;
+
+	left: 0;
+	top: 0;
+
+	width: 4px;
+	height: 100%;
+
+	background: rgba(90, 190, 255, 0.75);
+}
+
+
+/* 오른쪽 화살표 */
+
+body > .start-button::after {
+	content: "→";
+
+	position: absolute;
+
+	right: 20px;
+	top: 50%;
+
+	transform: translateY(-50%);
+
+	font-size: 20px;
+
+	color: rgba(120, 200, 255, 0.8);
+}
+
+
+/* 마우스 올렸을 때 */
+
+body > .start-button:hover {
+	background: rgba(10, 30, 50, 0.88);
+
+	border-color: rgba(100, 200, 255, 0.9);
+
+	box-shadow:
+		0 0 20px rgba(70, 180, 255, 0.15);
+
+	transform: translateY(48px);
+}
+
+
+/* 클릭 중 */
+
+body > .start-button:active {
+	transform: translateY(50px);
+}
+
+
+/* ================================
+   음원 버튼
+   ================================ */
+
+.sound-button {
+	position: absolute;
+	z-index: 3;
+
+	top: 35px;
+	right: 45px;
+
+	width: 38px;
+	height: 38px;
+
+	padding: 8px;
+
+	object-fit: contain;
+
+	background: rgba(5, 15, 30, 0.72);
+
+	border: 1px solid rgba(90, 180, 255, 0.55);
+	border-radius: 50%;
+
+	cursor: pointer;
+
+	transition:
+		background 0.25s ease,
+		border-color 0.25s ease,
+		transform 0.25s ease,
+		box-shadow 0.25s ease;
+}
+
+
+.sound-button:hover {
+	background: rgba(10, 30, 50, 0.9);
+
+	border-color: rgba(100, 200, 255, 0.9);
+
+	box-shadow:
+		0 0 15px rgba(70, 180, 255, 0.2);
+
+	transform: scale(1.05);
+}
+
+
+/* ================================
+   제작자
+   ================================ */
+
+.developer {
+	position: absolute;
+	z-index: 2;
+
+	right: 45px;
+	bottom: 35px;
+
+	font-size: 12px;
+	font-weight: 300;
+
+	letter-spacing: 2px;
+
+	color: rgba(220, 235, 250, 0.6);
+}
+
+
+/* ================================
+   태블릿
+   ================================ */
+
+@media (max-width: 800px) {
+
+	body::after {
+		inset: 12px;
+	}
+
+
+	.game-title {
+		font-size: 18px;
+		letter-spacing: 5px;
+	}
+
+
+	.game-subtitle {
+		margin-bottom: 18px;
+
+		font-size: 52px;
+		letter-spacing: 12px;
+	}
+
+
+	.game-description {
+		margin-bottom: 26px;
+
+		font-size: 14px;
+		letter-spacing: 2px;
+	}
+
+
+	.id-label {
+		transform: translate(-158px, 30px);
+
+		line-height: 36px;
+
+		margin-bottom: -36px;
+
+		font-size: 16px;
+
+		letter-spacing: 1.8px;
+	}
+
+
+	body > input[name="id"] {
+		width: 240px;
+		height: 36px;
+
+		transform: translateY(30px);
+
+		margin-bottom: 22px;
+
+		font-size: 13px;
+	}
+
+
+	body > .start-button {
+		width: 240px;
+		height: 62px;
+
+		transform: translateY(50px);
+
+		font-size: 15px;
+	}
+
+
+	body > .start-button:hover {
+		transform: translateY(48px);
+	}
+
+
+	body > .start-button:active {
+		transform: translateY(50px);
+	}
+
+
+	.sound-button {
+		top: 28px;
+		right: 30px;
+
+		width: 34px;
+		height: 34px;
+	}
+
+
+	.developer {
+		right: 30px;
+		bottom: 28px;
+
+		font-size: 11px;
+	}
+}
+
+
+/* ================================
+   모바일
+   ================================ */
+
+@media (max-width: 500px) {
+
+	body::after {
+		inset: 8px;
+	}
+
+
+	.game-title {
+		font-size: 15px;
+		letter-spacing: 3px;
+
+		margin-bottom: 6px;
+	}
+
+
+	.game-subtitle {
+		margin-bottom: 15px;
+
+		font-size: 38px;
+		letter-spacing: 8px;
+	}
+
+
+	.game-description {
+		width: 80%;
+
+		margin-bottom: 23px;
+
+		font-size: 13px;
+		letter-spacing: 1px;
+
+		line-height: 1.6;
+	}
+
+
+	.id-label {
+		transform: translate(-140px, 30px);
+
+		line-height: 34px;
+
+		margin-bottom: -34px;
+
+		font-size: 15px;
+
+		letter-spacing: 1.5px;
+	}
+
+
+	body > input[name="id"] {
+		width: 210px;
+		height: 34px;
+
+		transform: translateY(30px);
+
+		margin-bottom: 20px;
+
+		font-size: 13px;
+	}
+
+
+	body > .start-button {
+		width: 210px;
+		height: 58px;
+
+		transform: translateY(50px);
+
+		font-size: 14px;
+
+		letter-spacing: 3px;
+	}
+
+
+	body > .start-button:hover {
+		transform: translateY(48px);
+	}
+
+
+	body > .start-button:active {
+		transform: translateY(50px);
+	}
+
+
+	body > .start-button::after {
+		right: 15px;
+
+		font-size: 18px;
+	}
+
+
+	.sound-button {
+		top: 20px;
+		right: 20px;
+
+		width: 31px;
+		height: 31px;
+
+		padding: 6px;
+	}
+
+
+	.developer {
+		right: 20px;
+		bottom: 20px;
+
+		font-size: 10px;
+
+		letter-spacing: 1px;
+	}
+}

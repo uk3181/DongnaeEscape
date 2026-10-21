@@ -1,0 +1,521 @@
+@charset "UTF-8";
+
+/* ========================================
+   기본 설정
+======================================== */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	position: relative;
+
+	padding: 30px 35px;
+
+	background: #111820;
+	color: #e8edf2;
+
+	font-family: "Malgun Gothic", "Noto Sans KR", sans-serif;
+
+	overflow-y: auto;
+}
+
+
+/* ========================================
+   제목
+======================================== */
+
+.title {
+	margin-bottom: 5px;
+
+	font-size: 28px;
+	font-weight: bold;
+	letter-spacing: 2px;
+
+	color: #edf1f5;
+}
+
+.sub-title {
+	margin-bottom: 25px;
+
+	font-size: 14px;
+	font-weight: normal;
+	letter-spacing: 1px;
+
+	color: #8995a1;
+}
+
+
+/* ========================================
+   검색 / 필터 영역
+======================================== */
+
+body > form {
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+}
+
+
+/* 검색 영역 라벨 */
+
+body > form > label {
+	display: inline-block;
+
+	margin-right: 0;
+
+	font-size: 13px;
+	font-weight: bold;
+	letter-spacing: 1px;
+
+	color: #929da8;
+
+	white-space: nowrap;
+}
+
+
+/* ID 입력 */
+
+body > form input[name="id"] {
+	width: 220px;
+	height: 40px;
+
+	margin-right: 15px;
+
+	padding: 0 14px;
+
+	background: rgba(10, 15, 21, 0.8);
+
+	border: 1px solid rgba(150, 165, 180, 0.2);
+	border-radius: 4px;
+
+	outline: none;
+
+	font-size: 14px;
+
+	color: #e8edf2;
+}
+
+body > form input[name="id"]:focus {
+	border-color: rgba(180, 195, 210, 0.55);
+
+	box-shadow:
+		0 0 8px rgba(150, 170, 190, 0.15);
+}
+
+
+/* 상태 선택 */
+
+body > form select {
+	width: 120px;
+	height: 40px;
+
+	padding: 0 10px;
+
+	background: rgba(10, 15, 21, 0.8);
+
+	border: 1px solid rgba(150, 165, 180, 0.2);
+	border-radius: 4px;
+
+	outline: none;
+
+	cursor: pointer;
+
+	font-size: 13px;
+
+	color: #e8edf2;
+}
+
+body > form select:focus {
+	border-color: rgba(180, 195, 210, 0.55);
+
+	box-shadow:
+		0 0 8px rgba(150, 170, 190, 0.15);
+}
+
+
+/* 조회 버튼 */
+
+body > form input[type="submit"] {
+	width: 80px;
+	height: 40px;
+
+	background: rgba(65, 76, 88, 0.9);
+
+	border: 1px solid rgba(160, 175, 190, 0.25);
+	border-radius: 4px;
+
+	cursor: pointer;
+
+	font-size: 13px;
+	font-weight: bold;
+
+	color: #e9eef2;
+
+	transition:
+		background 0.2s ease,
+		transform 0.2s ease;
+}
+
+body > form input[type="submit"]:hover {
+	background: rgba(85, 98, 112, 0.95);
+
+	transform: translateY(-1px);
+}
+
+body > form input[type="submit"]:active {
+	transform: translateY(0);
+}
+
+
+/* ========================================
+   플레이 기록 제목
+======================================== */
+
+h3 {
+	margin-top: 30px;
+	margin-bottom: 6px;
+
+	font-size: 18px;
+	font-weight: bold;
+	letter-spacing: 1px;
+
+	color: #e5ebf0;
+}
+
+h4 {
+	margin-bottom: 12px;
+
+	font-size: 13px;
+	font-weight: normal;
+	letter-spacing: 1px;
+
+	color: #8995a1;
+}
+
+
+/* ========================================
+   플레이 기록 프레임
+======================================== */
+
+.play-records-frame {
+	width: 100%;
+
+	padding: 15px 20px;
+
+	background: rgba(30, 38, 48, 0.9);
+
+	border: 1px solid rgba(150, 165, 180, 0.2);
+	border-radius: 5px;
+
+	box-shadow:
+		0 5px 15px rgba(0, 0, 0, 0.25),
+		inset 0 0 15px rgba(255, 255, 255, 0.02);
+
+	overflow-x: auto;
+	overflow-y: auto;
+
+	max-height: 650px;
+}
+
+
+/* ========================================
+   플레이 기록 테이블
+======================================== */
+
+.play-records-frame table {
+	width: 100%;
+
+	min-width: 750px;
+
+	border-collapse: collapse;
+
+	table-layout: fixed;
+}
+
+
+/* 테이블 헤더 */
+
+.play-records-frame tr:first-child {
+	background: rgba(255, 255, 255, 0.04);
+}
+
+
+/* 기본 셀 */
+
+.play-records-frame td {
+	height: 38px;
+
+	padding: 7px 10px;
+
+	border-bottom: 1px solid rgba(150, 165, 180, 0.1);
+
+	font-size: 13px;
+
+	color: #cbd3da;
+
+	text-align: center;
+
+	white-space: nowrap;
+
+	overflow: hidden;
+
+	text-overflow: ellipsis;
+}
+
+
+/* 테이블 헤더 셀 */
+
+.play-records-frame tr:first-child td {
+	height: 40px;
+
+	font-size: 12px;
+	font-weight: bold;
+
+	color: #8995a1;
+
+	border-bottom: 1px solid rgba(150, 165, 180, 0.2);
+}
+
+
+/* ========================================
+   각 열 너비
+======================================== */
+
+.play-records-frame td:nth-child(1) {
+	width: 14%;
+}
+
+.play-records-frame td:nth-child(2) {
+	width: 20%;
+}
+
+.play-records-frame td:nth-child(3) {
+	width: 17%;
+}
+
+.play-records-frame td:nth-child(4) {
+	width: 20%;
+}
+
+.play-records-frame td:nth-child(5) {
+	width: 14%;
+}
+
+.play-records-frame td:nth-child(6) {
+	width: 15%;
+}
+
+
+/* ========================================
+   행 마우스 오버
+======================================== */
+
+.play-records-frame tr:not(:first-child) {
+	transition: background 0.15s ease;
+}
+
+.play-records-frame tr:not(:first-child):hover {
+	background: rgba(255, 255, 255, 0.04);
+}
+
+
+/* ========================================
+   스크롤바
+======================================== */
+
+::-webkit-scrollbar {
+	width: 7px;
+	height: 7px;
+}
+
+::-webkit-scrollbar-track {
+	background: rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb {
+	background: rgba(130, 145, 160, 0.35);
+
+	border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: rgba(150, 165, 180, 0.5);
+}
+
+
+/* ========================================
+   1000px 이하
+======================================== */
+
+@media (max-width: 1000px) {
+
+	body {
+		padding: 25px;
+	}
+
+	body > form input[name="id"] {
+		width: 180px;
+
+		margin-right: 10px;
+	}
+
+	.play-records-frame {
+		padding: 12px 15px;
+	}
+}
+
+
+/* ========================================
+   750px 이하
+======================================== */
+
+@media (max-width: 750px) {
+
+	body {
+		padding: 20px;
+	}
+
+	.title {
+		font-size: 24px;
+	}
+
+	.sub-title {
+		margin-bottom: 20px;
+	}
+
+
+	/* 검색 영역 */
+
+	body > form {
+		display: flex;
+		flex-wrap: wrap;
+
+		width: 100%;
+		gap: 10px;
+	}
+
+	body > form > label {
+		font-size: 12px;
+	}
+
+	body > form input[name="id"] {
+		display: block;
+
+		width: 100%;
+
+		margin-right: 0;
+	}
+
+	body > form select {
+		flex: 1;
+		min-width: 0;
+	}
+
+	body > form input[type="submit"] {
+		width: 75px;
+	}
+
+
+	/* 제목 */
+
+	h3 {
+		margin-top: 25px;
+
+		font-size: 16px;
+	}
+
+	h4 {
+		font-size: 12px;
+	}
+
+
+	/* 기록 프레임 */
+
+	.play-records-frame {
+		padding: 10px;
+	}
+}
+
+
+/* ========================================
+   500px 이하
+======================================== */
+
+@media (max-width: 500px) {
+
+	body {
+		padding: 15px;
+	}
+
+	.title {
+		font-size: 21px;
+	}
+
+	.sub-title {
+		font-size: 12px;
+	}
+
+
+	body > form {
+		gap: 7px;
+	}
+
+	body > form input[name="id"] {
+		height: 38px;
+
+		font-size: 13px;
+	}
+
+	body > form select {
+		height: 38px;
+
+		font-size: 12px;
+	}
+
+	body > form input[type="submit"] {
+		width: 65px;
+		height: 38px;
+
+		font-size: 12px;
+	}
+
+
+	h3 {
+		font-size: 14px;
+	}
+
+	h4 {
+		margin-bottom: 10px;
+
+		font-size: 11px;
+	}
+
+
+	.play-records-frame {
+		padding: 8px;
+	}
+
+	.play-records-frame td {
+		height: 35px;
+
+		padding: 5px 7px;
+
+		font-size: 11px;
+	}
+
+	.play-records-frame tr:first-child td {
+		height: 36px;
+
+		font-size: 10px;
+	}
+}

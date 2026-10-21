@@ -1,0 +1,527 @@
+@charset "UTF-8";
+
+/* ========================================
+   기본 설정
+======================================== */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	position: relative;
+
+	padding: 30px 35px;
+
+	background: #111820;
+	color: #e8edf2;
+
+	font-family: "Malgun Gothic", "Noto Sans KR", sans-serif;
+
+	overflow-y: auto;
+}
+
+
+/* ========================================
+   제목
+======================================== */
+
+.title {
+	margin-bottom: 5px;
+
+	font-size: 28px;
+	font-weight: bold;
+	letter-spacing: 2px;
+
+	color: #edf1f5;
+}
+
+.sub-title {
+	margin-bottom: 25px;
+
+	font-size: 14px;
+	font-weight: normal;
+	letter-spacing: 1px;
+
+	color: #8995a1;
+}
+
+
+/* ========================================
+   사용자 검색 프레임
+======================================== */
+
+.search-user-frame {
+	width: 100%;
+	min-height: 105px;
+
+	padding: 20px 25px;
+
+	background: rgba(30, 38, 48, 0.9);
+
+	border: 1px solid rgba(150, 165, 180, 0.2);
+	border-radius: 5px;
+
+	box-shadow:
+		0 5px 15px rgba(0, 0, 0, 0.25),
+		inset 0 0 15px rgba(255, 255, 255, 0.02);
+}
+
+.search-user-frame > label {
+	display: inline-block;
+
+	margin-bottom: 10px;
+
+	font-size: 14px;
+	font-weight: bold;
+	letter-spacing: 1px;
+
+	color: #929da8;
+}
+
+
+/* ========================================
+   검색 폼
+======================================== */
+
+.search-user-frame form {
+	display: flex;
+
+	width: 100%;
+
+	gap: 10px;
+}
+
+
+/* ID 입력 */
+
+.search-user-frame input[name="id"] {
+	flex: 1;
+
+	height: 40px;
+
+	padding: 0 14px;
+
+	background: rgba(10, 15, 21, 0.8);
+
+	border: 1px solid rgba(150, 165, 180, 0.2);
+	border-radius: 4px;
+
+	outline: none;
+
+	font-size: 14px;
+
+	color: #e8edf2;
+}
+
+.search-user-frame input[name="id"]:focus {
+	border-color: rgba(180, 195, 210, 0.55);
+
+	box-shadow:
+		0 0 8px rgba(150, 170, 190, 0.15);
+}
+
+
+/* 조회 버튼 */
+
+.search-user-frame input[type="submit"] {
+	width: 80px;
+	height: 40px;
+
+	background: rgba(65, 76, 88, 0.9);
+
+	border: 1px solid rgba(160, 175, 190, 0.25);
+	border-radius: 4px;
+
+	cursor: pointer;
+
+	font-size: 13px;
+	font-weight: bold;
+
+	color: #e9eef2;
+
+	transition:
+		background 0.2s ease,
+		transform 0.2s ease;
+}
+
+.search-user-frame input[type="submit"]:hover {
+	background: rgba(85, 98, 112, 0.95);
+
+	transform: translateY(-1px);
+}
+
+.search-user-frame input[type="submit"]:active {
+	transform: translateY(0);
+}
+
+
+/* ========================================
+   섹션 제목
+======================================== */
+
+h3 {
+	margin-top: 25px;
+	margin-bottom: 10px;
+
+	font-size: 16px;
+	font-weight: bold;
+	letter-spacing: 1px;
+
+	color: #e5ebf0;
+}
+
+
+/* ========================================
+   검색 결과 프레임
+======================================== */
+
+.search-result-frame {
+	width: 100%;
+
+	padding: 15px 20px;
+
+	background: rgba(30, 38, 48, 0.9);
+
+	border: 1px solid rgba(150, 165, 180, 0.2);
+	border-radius: 5px;
+
+	box-shadow:
+		0 5px 15px rgba(0, 0, 0, 0.25),
+		inset 0 0 15px rgba(255, 255, 255, 0.02);
+
+	overflow-x: auto;
+}
+
+
+/* ========================================
+   검색 결과 테이블
+======================================== */
+
+.search-result-frame table {
+	width: 100%;
+
+	border-collapse: collapse;
+
+	table-layout: fixed;
+}
+
+.search-result-frame tr:first-child {
+	background: rgba(255, 255, 255, 0.04);
+}
+
+.search-result-frame td {
+	height: 38px;
+
+	padding: 7px 10px;
+
+	border-bottom: 1px solid rgba(150, 165, 180, 0.1);
+
+	font-size: 13px;
+
+	color: #cbd3da;
+
+	text-align: center;
+}
+
+.search-result-frame tr:first-child td {
+	font-size: 12px;
+	font-weight: bold;
+
+	color: #8995a1;
+
+	border-bottom: 1px solid rgba(150, 165, 180, 0.2);
+}
+
+
+/* 검색 결과 열 너비 */
+
+.search-result-frame td:nth-child(1) {
+	width: 25%;
+}
+
+.search-result-frame td:nth-child(2) {
+	width: 25%;
+}
+
+.search-result-frame td:nth-child(3) {
+	width: 20%;
+}
+
+.search-result-frame td:nth-child(4) {
+	width: 30%;
+}
+
+
+/* 마우스 오버 */
+
+.search-result-frame tr:not(:first-child):hover {
+	background: rgba(255, 255, 255, 0.04);
+}
+
+
+/* ========================================
+   기본 정보 / 게임 진행 정보
+   좌우 나란히 배치
+======================================== */
+
+.regular-info-frame,
+.game-play-info-frame {
+	float: left;
+
+	width: 48.5%;
+
+	min-height: 190px;
+
+	padding: 20px;
+
+	vertical-align: top;
+
+	background: rgba(30, 38, 48, 0.9);
+
+	border: 1px solid rgba(150, 165, 180, 0.2);
+	border-radius: 5px;
+
+	box-shadow:
+		0 5px 15px rgba(0, 0, 0, 0.25),
+		inset 0 0 15px rgba(255, 255, 255, 0.02);
+}
+
+
+/* 프레임 사이 간격 */
+
+.regular-info-frame {
+	margin-right: 3%;
+}
+
+
+/* ========================================
+   상세 정보 테이블
+======================================== */
+
+.regular-info-frame table,
+.game-play-info-frame table {
+	width: 100%;
+
+	border-collapse: collapse;
+
+	table-layout: fixed;
+}
+
+.regular-info-frame td,
+.game-play-info-frame td {
+	height: 38px;
+
+	padding: 7px 10px;
+
+	border-bottom: 1px solid rgba(150, 165, 180, 0.1);
+
+	font-size: 13px;
+
+	color: #cbd3da;
+}
+
+
+/* 왼쪽 항목 */
+
+.regular-info-frame td:first-child,
+.game-play-info-frame td:first-child {
+	width: 42%;
+
+	font-weight: bold;
+
+	color: #8995a1;
+}
+
+
+/* 오른쪽 값 */
+
+.regular-info-frame td:last-child,
+.game-play-info-frame td:last-child {
+	width: 58%;
+
+	color: #e2e7eb;
+
+	text-align: right;
+}
+
+
+/* 마지막 줄 */
+
+.regular-info-frame tr:last-child td,
+.game-play-info-frame tr:last-child td {
+	border-bottom: none;
+}
+
+
+/* ========================================
+   마우스 오버
+======================================== */
+
+.regular-info-frame tr:hover,
+.game-play-info-frame tr:hover {
+	background: rgba(255, 255, 255, 0.025);
+}
+
+
+/* ========================================
+   스크롤바
+======================================== */
+
+::-webkit-scrollbar {
+	width: 7px;
+	height: 7px;
+}
+
+::-webkit-scrollbar-track {
+	background: rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb {
+	background: rgba(130, 145, 160, 0.35);
+
+	border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: rgba(150, 165, 180, 0.5);
+}
+
+
+/* ========================================
+   1000px 이하
+======================================== */
+
+@media (max-width: 1000px) {
+
+	body {
+		padding: 25px;
+	}
+
+	.regular-info-frame,
+	.game-play-info-frame {
+		width: 48%;
+	}
+
+	.regular-info-frame {
+		margin-right: 4%;
+	}
+
+}
+
+
+/* ========================================
+   750px 이하
+======================================== */
+
+@media (max-width: 750px) {
+
+	body {
+		padding: 20px;
+	}
+
+	.title {
+		font-size: 24px;
+	}
+
+	.sub-title {
+		margin-bottom: 20px;
+	}
+
+	.search-user-frame {
+		padding: 18px;
+	}
+
+	.search-result-frame {
+		padding: 12px;
+	}
+
+	.regular-info-frame,
+	.game-play-info-frame {
+		float: none;
+
+		display: block;
+
+		width: 100%;
+
+		min-height: 0;
+
+		margin-right: 0;
+		margin-bottom: 15px;
+	}
+
+}
+
+
+/* ========================================
+   500px 이하
+======================================== */
+
+@media (max-width: 500px) {
+
+	body {
+		padding: 15px;
+	}
+
+	.title {
+		font-size: 21px;
+	}
+
+	.sub-title {
+		font-size: 12px;
+	}
+
+	.search-user-frame {
+		padding: 15px;
+	}
+
+	.search-user-frame form {
+		gap: 7px;
+	}
+
+	.search-user-frame input[name="id"] {
+		height: 38px;
+
+		font-size: 13px;
+	}
+
+	.search-user-frame input[type="submit"] {
+		width: 65px;
+		height: 38px;
+
+		font-size: 12px;
+	}
+
+	h3 {
+		margin-top: 20px;
+
+		font-size: 14px;
+	}
+
+	.search-result-frame td {
+		font-size: 11px;
+	}
+
+	.search-result-frame tr:first-child td {
+		font-size: 10px;
+	}
+
+	.regular-info-frame,
+	.game-play-info-frame {
+		padding: 15px;
+	}
+
+	.regular-info-frame td,
+	.game-play-info-frame td {
+		font-size: 12px;
+	}
+
+}

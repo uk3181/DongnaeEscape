@@ -1,0 +1,607 @@
+@charset "UTF-8";
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	position: relative;
+	overflow: hidden;
+
+	font-family: "Noto Sans KR", "Malgun Gothic", Arial, sans-serif;
+	color: #ffffff;
+}
+
+
+/* ==============================
+   배경
+   ============================== */
+
+.background-image {
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	width: 100vw;
+	height: 100vh;
+
+	object-fit: cover;
+
+	z-index: -2;
+}
+
+body::after {
+	content: "";
+
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	height: 100%;
+
+	background:
+		linear-gradient(
+			to bottom,
+			rgba(3, 7, 18, 0.40),
+			rgba(3, 7, 18, 0.78)
+		);
+
+	z-index: -1;
+
+	pointer-events: none;
+}
+
+body::before {
+	content: "";
+
+	position: fixed;
+
+	top: 22px;
+	left: 22px;
+	right: 22px;
+	bottom: 22px;
+
+	border: 1px solid rgba(180, 210, 255, 0.18);
+
+	pointer-events: none;
+
+	z-index: 10;
+}
+
+
+/* ==============================
+   엔딩 메시지
+   ============================== */
+
+.ending-message {
+	position: absolute;
+
+	top: 25%;
+	left: 50%;
+
+	transform: translateX(-50%);
+
+	width: min(900px, 70%);
+
+	padding: 35px 45px;
+
+	text-align: center;
+
+	font-size: 30px;
+	font-weight: 600;
+
+	line-height: 1.7;
+
+	letter-spacing: 2px;
+
+	color: rgba(245, 247, 255, 0.95);
+
+	background: rgba(8, 15, 28, 0.68);
+
+	border: 1px solid rgba(180, 210, 255, 0.35);
+
+	border-radius: 5px;
+
+	box-shadow:
+		0 10px 35px rgba(0, 0, 0, 0.45),
+		inset 0 0 25px rgba(120, 170, 230, 0.04);
+
+	backdrop-filter: blur(4px);
+
+	text-shadow:
+		0 2px 5px rgba(0, 0, 0, 0.8),
+		0 0 18px rgba(130, 180, 255, 0.18);
+
+	z-index: 2;
+}
+
+
+/* ==============================
+   게임 다시 시작 버튼
+   ============================== */
+
+body > form {
+	position: absolute;
+
+	top: calc(25% + 395px);
+	left: 50%;
+
+	transform: translateX(-50%);
+
+	margin: 0;
+
+	z-index: 3;
+}
+
+body > form input[type="submit"] {
+	width: 230px;
+	height: 58px;
+
+	padding: 10px 25px;
+
+	border: 1px solid rgba(180, 215, 255, 0.65);
+
+	border-radius: 3px;
+
+	background: rgba(8, 18, 35, 0.68);
+
+	color: rgba(245, 247, 255, 0.95);
+
+	font-family: inherit;
+
+	font-size: 16px;
+	font-weight: 500;
+
+	letter-spacing: 3px;
+
+	cursor: pointer;
+
+	backdrop-filter: blur(4px);
+
+	box-shadow:
+		0 0 20px rgba(80, 140, 220, 0.10),
+		inset 0 0 15px rgba(100, 150, 220, 0.04);
+
+	transition:
+		background-color 0.25s ease,
+		border-color 0.25s ease,
+		box-shadow 0.25s ease,
+		transform 0.25s ease;
+}
+
+body > form input[type="submit"]:hover {
+	background: rgba(30, 65, 105, 0.72);
+
+	border-color: rgba(200, 230, 255, 0.95);
+
+	box-shadow:
+		0 0 25px rgba(90, 170, 255, 0.22),
+		0 0 50px rgba(70, 130, 220, 0.10),
+		inset 0 0 20px rgba(120, 180, 255, 0.07);
+
+	transform: translateY(-3px);
+}
+
+body > form input[type="submit"]:active {
+	transform: translateY(0);
+}
+
+
+/* ==============================
+   Credits 상자
+   ============================== */
+
+.credits {
+	position: absolute;
+
+	left: 45px;
+	bottom: 40px;
+
+	width: 330px;
+
+	/* 기존보다 상하 여백 축소 */
+	padding: 14px 24px;
+
+	background: rgba(8, 12, 20, 0.70);
+
+	border: 1px solid rgba(180, 200, 225, 0.22);
+
+	border-radius: 5px;
+
+	box-shadow:
+		0 8px 25px rgba(0, 0, 0, 0.40),
+		inset 0 0 18px rgba(150, 180, 220, 0.025);
+
+	backdrop-filter: blur(4px);
+
+	z-index: 3;
+}
+
+
+/* Credits 제목 */
+
+.credits .title-label {
+	display: block;
+
+	margin-bottom: 8px;
+
+	padding-bottom: 6px;
+
+	font-size: 17px;
+	font-weight: 600;
+
+	letter-spacing: 3px;
+
+	color: rgba(235, 242, 255, 0.95);
+
+	border-bottom: 1px solid rgba(180, 210, 240, 0.25);
+}
+
+
+/* Credits 내용 */
+
+.credits label:not(.title-label) {
+	display: block;
+
+	margin: 4px 0;
+
+	font-size: 12px;
+	font-weight: 300;
+
+	line-height: 1.35;
+
+	letter-spacing: 0.6px;
+
+	color: rgba(215, 225, 240, 0.68);
+}
+
+
+/* ==============================
+   BGM 상자
+   ============================== */
+
+.BGM {
+	position: absolute;
+
+	right: 45px;
+	bottom: 40px;
+
+	width: 470px;
+
+	/* 기존보다 상하 여백 축소 */
+	padding: 14px 24px;
+
+	background: rgba(8, 12, 20, 0.70);
+
+	border: 1px solid rgba(180, 200, 225, 0.22);
+
+	border-radius: 5px;
+
+	box-shadow:
+		0 8px 25px rgba(0, 0, 0, 0.40),
+		inset 0 0 18px rgba(150, 180, 220, 0.025);
+
+	backdrop-filter: blur(4px);
+
+	z-index: 3;
+}
+
+
+/* BGM 제목 */
+
+.BGM .title-label {
+	display: block;
+
+	margin-bottom: 8px;
+
+	padding-bottom: 6px;
+
+	font-size: 17px;
+	font-weight: 600;
+
+	letter-spacing: 3px;
+
+	color: rgba(235, 242, 255, 0.95);
+
+	border-bottom: 1px solid rgba(180, 210, 240, 0.25);
+}
+
+
+/* BGM 내용 */
+
+.BGM label:not(.title-label) {
+	display: block;
+
+	margin: 3px 0;
+
+	font-size: 11px;
+	font-weight: 300;
+
+	line-height: 1.35;
+
+	letter-spacing: 0.4px;
+
+	color: rgba(215, 225, 240, 0.68);
+
+	word-break: break-word;
+}
+
+
+/* ==============================
+   1000px 이하
+   ============================== */
+
+@media (max-width: 1000px) {
+
+	.ending-message {
+		width: 75%;
+
+		font-size: 26px;
+	}
+
+	.credits {
+		left: 25px;
+		bottom: 30px;
+
+		width: 300px;
+	}
+
+	.BGM {
+		right: 25px;
+		bottom: 30px;
+
+		width: 400px;
+	}
+}
+
+
+/* ==============================
+   800px 이하
+   ============================== */
+
+@media (max-width: 800px) {
+
+	.ending-message {
+		top: 20%;
+
+		width: 80%;
+
+		padding: 28px 30px;
+
+		font-size: 23px;
+	}
+
+	body > form {
+		top: calc(20% + 170px);
+	}
+
+
+	.credits,
+	.BGM {
+		position: absolute;
+
+		width: 42%;
+
+		padding: 12px 18px;
+	}
+
+
+	.credits {
+		left: 20px;
+		bottom: 25px;
+	}
+
+	.BGM {
+		right: 20px;
+		bottom: 25px;
+	}
+
+
+	.credits .title-label,
+	.BGM .title-label {
+		margin-bottom: 6px;
+		padding-bottom: 5px;
+
+		font-size: 15px;
+	}
+
+
+	.credits label:not(.title-label),
+	.BGM label:not(.title-label) {
+		margin: 3px 0;
+
+		font-size: 10px;
+
+		line-height: 1.3;
+	}
+}
+
+
+/* ==============================
+   600px 이하
+   ============================== */
+
+@media (max-width: 600px) {
+
+	body::before {
+		top: 12px;
+		left: 12px;
+		right: 12px;
+		bottom: 12px;
+	}
+
+
+	.ending-message {
+		top: 15%;
+
+		width: 85%;
+
+		padding: 22px 20px;
+
+		font-size: 19px;
+
+		line-height: 1.6;
+
+		letter-spacing: 1px;
+	}
+
+
+	body > form {
+		top: calc(15% + 150px);
+	}
+
+	body > form input[type="submit"] {
+		width: 200px;
+		height: 52px;
+
+		font-size: 14px;
+
+		letter-spacing: 2px;
+	}
+
+
+	.credits,
+	.BGM {
+		width: 44%;
+
+		padding: 10px 14px;
+
+		bottom: 18px;
+	}
+
+
+	.credits {
+		left: 10px;
+	}
+
+	.BGM {
+		right: 10px;
+	}
+
+
+	.credits .title-label,
+	.BGM .title-label {
+		margin-bottom: 5px;
+
+		padding-bottom: 4px;
+
+		font-size: 13px;
+	}
+
+
+	.credits label:not(.title-label),
+	.BGM label:not(.title-label) {
+		margin: 2px 0;
+
+		font-size: 8px;
+
+		line-height: 1.25;
+	}
+}
+
+/* ========================================
+   BGM 재생 버튼
+======================================== */
+
+.sound-button {
+	position: absolute;
+
+	top: 35px;
+	right: 45px;
+
+	width: 38px;
+	height: 38px;
+
+	padding: 7px;
+
+	object-fit: contain;
+
+	background: rgba(8, 18, 35, 0.55);
+
+	border: 1px solid rgba(180, 215, 255, 0.45);
+	border-radius: 50%;
+
+	box-shadow:
+		0 0 15px rgba(80, 140, 220, 0.10),
+		inset 0 0 10px rgba(100, 150, 220, 0.05);
+
+	cursor: pointer;
+
+	opacity: 0.75;
+
+	backdrop-filter: blur(4px);
+
+	z-index: 10;
+
+	transition:
+		opacity 0.25s ease,
+		background-color 0.25s ease,
+		border-color 0.25s ease,
+		box-shadow 0.25s ease,
+		transform 0.25s ease;
+}
+
+
+/* 마우스를 올렸을 때 */
+
+.sound-button:hover {
+	opacity: 1;
+
+	background: rgba(30, 65, 105, 0.65);
+
+	border-color: rgba(200, 230, 255, 0.85);
+
+	box-shadow:
+		0 0 18px rgba(90, 170, 255, 0.20),
+		inset 0 0 10px rgba(120, 180, 255, 0.08);
+
+	transform: scale(1.08);
+}
+
+
+/* 클릭했을 때 */
+
+.sound-button:active {
+	transform: scale(0.96);
+}
+
+
+/* ========================================
+   BGM 버튼 반응형
+======================================== */
+
+@media (max-width: 800px) {
+
+	.sound-button {
+		top: 25px;
+		right: 30px;
+
+		width: 34px;
+		height: 34px;
+
+		padding: 6px;
+	}
+}
+
+
+@media (max-width: 500px) {
+
+	.sound-button {
+		top: 20px;
+		right: 22px;
+
+		width: 31px;
+		height: 31px;
+
+		padding: 5px;
+	}
+}

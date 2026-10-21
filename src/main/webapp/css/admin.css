@@ -1,0 +1,523 @@
+@charset "UTF-8";
+
+/* ================================
+   관리자 페이지 기본 설정
+   ================================ */
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	position: relative;
+
+	overflow: hidden;
+
+	background: #030a14;
+
+	color: #ffffff;
+
+	font-family: "Noto Sans KR", sans-serif;
+}
+
+
+/* ================================
+   배경화면
+   ================================ */
+
+.background-image {
+	position: fixed;
+
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	height: 100%;
+
+	object-fit: cover;
+
+	z-index: 0;
+}
+
+
+/* ================================
+   배경 어두운 오버레이
+   ================================ */
+
+body::before {
+	content: "";
+
+	position: fixed;
+
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	height: 100%;
+
+	background:
+		linear-gradient(
+			rgba(3, 10, 20, 0.65),
+			rgba(3, 10, 20, 0.82)
+		);
+
+	z-index: 1;
+
+	pointer-events: none;
+}
+
+
+/* ================================
+   화면 외곽 테두리
+   ================================ */
+
+body::after {
+	content: "";
+
+	position: fixed;
+
+	top: 18px;
+	left: 18px;
+	right: 18px;
+	bottom: 18px;
+
+	border: 1px solid rgba(120, 190, 255, 0.2);
+
+	z-index: 10;
+
+	pointer-events: none;
+}
+
+
+/* ================================
+   제목 프레임
+   ================================ */
+
+.title-frame {
+	position: absolute;
+
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	height: 120px;
+
+	z-index: 3;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	padding-left: 45px;
+
+	background:
+		linear-gradient(
+			to bottom,
+			rgba(3, 12, 25, 0.92),
+			rgba(3, 12, 25, 0.72)
+		);
+
+	border-bottom: 1px solid rgba(90, 180, 255, 0.3);
+
+	box-shadow:
+		0 5px 25px rgba(0, 0, 0, 0.25);
+}
+
+
+/* ================================
+   제목
+   ================================ */
+
+.title-frame h1 {
+	margin: 0 0 8px 0;
+
+	font-size: 25px;
+	font-weight: 600;
+
+	letter-spacing: 6px;
+
+	color: rgba(240, 248, 255, 0.95);
+
+	text-shadow:
+		0 0 15px rgba(90, 180, 255, 0.15);
+}
+
+
+/* ================================
+   부제목
+   ================================ */
+
+.title-frame h2 {
+	margin: 0;
+
+	font-size: 14px;
+	font-weight: 300;
+
+	letter-spacing: 3px;
+
+	color: rgba(130, 200, 255, 0.8);
+}
+
+
+/* ================================
+   메뉴바
+   ================================ */
+
+.menu-bar {
+	position: absolute;
+
+	top: 120px;
+	left: 0;
+	bottom: 0;
+
+	width: 250px;
+
+	z-index: 3;
+
+	display: flex;
+	flex-direction: column;
+
+	padding: 35px 20px;
+
+	background:
+		linear-gradient(
+			to right,
+			rgba(3, 12, 25, 0.94),
+			rgba(3, 12, 25, 0.82)
+		);
+
+	border-right: 1px solid rgba(90, 180, 255, 0.25);
+
+	box-shadow:
+		5px 0 25px rgba(0, 0, 0, 0.18);
+}
+
+
+/* ================================
+   메뉴 제목
+   ================================ */
+
+.menu-bar label {
+	margin: 0 0 25px 12px;
+
+	font-size: 13px;
+	font-weight: 600;
+
+	letter-spacing: 3px;
+
+	color: rgba(120, 190, 255, 0.8);
+}
+
+
+/* ================================
+   메뉴 버튼
+   ================================ */
+
+.menu-bar input[type="submit"] {
+	width: 100%;
+	height: 52px;
+
+	margin: 0 0 10px 0;
+	padding: 0 15px;
+
+	background: rgba(5, 20, 38, 0.35);
+
+	border: 1px solid transparent;
+	border-radius: 3px;
+
+	color: rgba(220, 235, 250, 0.75);
+
+	font-size: 15px;
+	font-family: inherit;
+
+	text-align: left;
+
+	letter-spacing: 1px;
+
+	cursor: pointer;
+
+	transition:
+		background 0.25s ease,
+		border-color 0.25s ease,
+		color 0.25s ease,
+		padding-left 0.25s ease,
+		box-shadow 0.25s ease;
+}
+
+
+/* ================================
+   메뉴 버튼 Hover
+   ================================ */
+
+.menu-bar input[type="submit"]:hover {
+	padding-left: 22px;
+
+	background:
+		linear-gradient(
+			to right,
+			rgba(50, 130, 190, 0.2),
+			rgba(50, 130, 190, 0.06)
+		);
+
+	border-color: rgba(90, 180, 255, 0.35);
+
+	color: #ffffff;
+
+	box-shadow:
+		0 0 15px rgba(70, 170, 230, 0.08);
+}
+
+
+/* ================================
+   메뉴 버튼 Focus
+   ================================ */
+
+.menu-bar input[type="submit"]:focus {
+	outline: none;
+
+	background:
+		linear-gradient(
+			to right,
+			rgba(50, 130, 190, 0.25),
+			rgba(50, 130, 190, 0.08)
+		);
+
+	border-color: rgba(100, 200, 255, 0.65);
+
+	color: #ffffff;
+}
+
+
+/* ================================
+   분석 프레임
+   ================================ */
+
+.analysis-frame {
+	position: absolute;
+
+	top: 150px;
+	left: 280px;
+
+	width: calc(100% - 315px);
+	height: calc(100% - 185px);
+
+	z-index: 2;
+
+	background: rgba(5, 15, 30, 0.72);
+
+	border: 1px solid rgba(90, 180, 255, 0.28);
+
+	border-radius: 4px;
+
+	box-shadow:
+		0 0 30px rgba(40, 140, 210, 0.08);
+
+}
+
+
+/* ================================
+   분석 프레임 내부 강조선
+   ================================ */
+
+.analysis-frame::before {
+	content: "";
+
+	position: absolute;
+
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	height: 3px;
+
+	background:
+		linear-gradient(
+			to right,
+			transparent,
+			rgba(90, 190, 255, 0.65),
+			transparent
+		);
+}
+
+
+/* ================================
+   태블릿
+   ================================ */
+
+@media (max-width: 900px) {
+
+	/* 화면 테두리 */
+
+	body::after {
+		top: 12px;
+		left: 12px;
+		right: 12px;
+		bottom: 12px;
+	}
+
+
+	/* 제목 프레임 */
+
+	.title-frame {
+		height: 100px;
+
+		padding-left: 30px;
+	}
+
+	.title-frame h1 {
+		font-size: 21px;
+
+		letter-spacing: 4px;
+	}
+
+	.title-frame h2 {
+		font-size: 13px;
+
+		letter-spacing: 2px;
+	}
+
+
+	/* 메뉴바 */
+
+	.menu-bar {
+		top: 100px;
+
+		width: 205px;
+
+		padding: 30px 15px;
+	}
+
+	.menu-bar label {
+		font-size: 12px;
+
+		letter-spacing: 2px;
+	}
+
+	.menu-bar input[type="submit"] {
+		height: 46px;
+
+		font-size: 14px;
+	}
+
+
+	/* 분석 프레임 */
+
+	.analysis-frame {
+		top: 125px;
+		left: 225px;
+
+		width: calc(100% - 250px);
+		height: calc(100% - 150px);
+	}
+}
+
+
+/* ================================
+   모바일
+   ================================ */
+
+@media (max-width: 600px) {
+
+	/* 화면 테두리 */
+
+	body::after {
+		top: 7px;
+		left: 7px;
+		right: 7px;
+		bottom: 7px;
+	}
+
+
+	/* 제목 프레임 */
+
+	.title-frame {
+		height: 85px;
+
+		padding-left: 20px;
+	}
+
+	.title-frame h1 {
+		font-size: 17px;
+
+		letter-spacing: 2px;
+	}
+
+	.title-frame h2 {
+		font-size: 11px;
+
+		letter-spacing: 1.5px;
+	}
+
+
+	/* 메뉴바 */
+
+	.menu-bar {
+		top: 85px;
+		left: 0;
+
+		width: 100%;
+		height: 65px;
+
+		bottom: auto;
+
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+
+		padding: 8px 12px;
+
+		border-right: none;
+		border-bottom: 1px solid rgba(90, 180, 255, 0.25);
+	}
+
+
+	/* 메뉴 제목 숨김 */
+
+	.menu-bar label {
+		display: none;
+	}
+
+
+	/* 메뉴 버튼 */
+
+	.menu-bar input[type="submit"] {
+		flex: 1;
+
+		width: auto;
+		height: 42px;
+
+		margin: 0 3px;
+		padding: 0 5px;
+
+		font-size: 11px;
+
+		text-align: center;
+	}
+
+
+	/* 모바일 Hover */
+
+	.menu-bar input[type="submit"]:hover {
+		padding-left: 5px;
+	}
+
+
+	/* 분석 프레임 */
+
+	.analysis-frame {
+		top: 165px;
+		left: 12px;
+
+		width: calc(100% - 24px);
+		height: calc(100% - 180px);
+	}
+}

@@ -1,0 +1,473 @@
+@charset "UTF-8";
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	position: relative;
+	padding: 30px 35px;
+	background: #111820;
+	color: #e8edf2;
+	font-family: "Malgun Gothic", "Noto Sans KR", sans-serif;
+	overflow-y: auto;
+}
+
+.title {
+	margin-bottom: 5px;
+	font-size: 28px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	color: #edf1f5;
+}
+
+.sub-title {
+	margin-bottom: 25px;
+	font-size: 14px;
+	font-weight: normal;
+	letter-spacing: 1px;
+	color: #8995a1;
+}
+
+
+/* 전체 플레이어 / 게임 성공 / 게임 실패 */
+
+.total-players-frame,
+.successful-frame,
+.failed-frame {
+	float: left;
+	width: 30%;
+	height: 120px;
+	padding: 20px;
+	margin-right: 2.5%;
+	background: rgba(30, 38, 48, 0.9);
+	border: 1px solid rgba(150, 165, 180, 0.2);
+	border-radius: 5px;
+	box-shadow:
+		0 5px 15px rgba(0, 0, 0, 0.25),
+		inset 0 0 15px rgba(255, 255, 255, 0.02);
+}
+
+.failed-frame {
+	margin-right: 0;
+}
+
+.total-players-frame label:first-child,
+.successful-frame label:first-child,
+.failed-frame label:first-child {
+	font-size: 14px;
+	color: #929da8;
+}
+
+.total-players-frame label:last-child,
+.successful-frame label:last-child,
+.failed-frame label:last-child {
+	display: inline-block;
+	margin-top: 10px;
+	font-size: 30px;
+	font-weight: bold;
+	color: #edf2f6;
+}
+
+
+/* 성공률 / 평균 이해도 */
+
+.successful-rate-frame,
+.average-comprehension-frame {
+	float: left;
+	width: 46.25%;
+	height: 110px;
+	padding: 20px;
+	margin-top: 20px;
+	background: rgba(30, 38, 48, 0.9);
+	border: 1px solid rgba(150, 165, 180, 0.2);
+	border-radius: 5px;
+	box-shadow:
+		0 5px 15px rgba(0, 0, 0, 0.25),
+		inset 0 0 15px rgba(255, 255, 255, 0.02);
+}
+
+.successful-rate-frame {
+	margin-right: 2.5%;
+}
+
+.successful-rate-frame label:first-child,
+.average-comprehension-frame label:first-child {
+	display: block;
+	font-size: 14px;
+	color: #929da8;
+}
+
+.successful-rate-frame label:last-child,
+.average-comprehension-frame label:last-child {
+	display: inline-block;
+	margin-top: 10px;
+	font-size: 28px;
+	font-weight: bold;
+	color: #edf2f6;
+}
+
+
+/* 게임 진행 통계 */
+
+h3 {
+	clear: both;
+	margin-top: 65px;
+	margin-bottom: 12px;
+
+	/* 화면에서 30px 아래로 이동 */
+	transform: translateY(30px);
+
+	font-size: 18px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	color: #e5ebf0;
+}
+
+
+/* 방별 / 오브젝트별 해결 현황 */
+
+.room-statistics-frame,
+.object-statistics-frame {
+	float: left;
+	width: 46.25%;
+	height: 260px;
+	padding: 20px;
+	margin-top: 10px;
+
+	/* 화면에서 30px 아래로 이동 */
+	transform: translateY(30px);
+
+	background: rgba(30, 38, 48, 0.9);
+	border: 1px solid rgba(150, 165, 180, 0.2);
+	border-radius: 5px;
+	box-shadow:
+		0 5px 15px rgba(0, 0, 0, 0.25),
+		inset 0 0 15px rgba(255, 255, 255, 0.02);
+	overflow-x: auto;
+}
+
+.room-statistics-frame {
+	margin-right: 2.5%;
+}
+
+.room-statistics-frame > label,
+.object-statistics-frame > label {
+	display: block;
+	margin-bottom: 15px;
+	font-size: 16px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	color: #e5ebf0;
+}
+
+
+/* 방별 해결 현황 */
+
+.room-statistics-frame table {
+	width: 100%;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+
+.room-statistics-frame td {
+	height: 42px;
+	padding: 7px 10px;
+	border-bottom: 1px solid rgba(150, 165, 180, 0.1);
+	font-size: 13px;
+	color: #cbd3da;
+	text-align: center;
+}
+
+.room-statistics-frame td:first-child {
+	width: 65%;
+	text-align: left;
+	color: #8995a1;
+}
+
+.room-statistics-frame td:last-child {
+	width: 35%;
+	font-weight: bold;
+	color: #e2e7eb;
+}
+
+.room-statistics-frame tr:last-child td {
+	border-bottom: none;
+}
+
+.room-statistics-frame tr:hover {
+	background: rgba(255, 255, 255, 0.025);
+}
+
+
+/* 오브젝트별 해결 현황 */
+
+.object-statistics-frame table {
+	width: 100%;
+	min-width: 580px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+
+.object-statistics-frame td {
+	height: 42px;
+	padding: 7px 8px;
+	border-bottom: 1px solid rgba(150, 165, 180, 0.1);
+	font-size: 12px;
+	color: #cbd3da;
+	text-align: center;
+	white-space: nowrap;
+}
+
+.object-statistics-frame tr:first-child {
+	background: rgba(255, 255, 255, 0.04);
+}
+
+.object-statistics-frame tr:first-child td {
+	font-size: 11px;
+	font-weight: bold;
+	color: #8995a1;
+	border-bottom: 1px solid rgba(150, 165, 180, 0.2);
+}
+
+.object-statistics-frame td:first-child {
+	width: 25%;
+	text-align: left;
+	color: #8995a1;
+}
+
+.object-statistics-frame td:nth-child(2),
+.object-statistics-frame td:nth-child(3),
+.object-statistics-frame td:nth-child(4),
+.object-statistics-frame td:nth-child(5),
+.object-statistics-frame td:nth-child(6) {
+	width: 15%;
+}
+
+.object-statistics-frame tr:not(:first-child) td:not(:first-child) {
+	color: #e2e7eb;
+}
+
+.object-statistics-frame tr:not(:first-child):hover {
+	background: rgba(255, 255, 255, 0.04);
+}
+
+
+/* 스크롤바 */
+
+::-webkit-scrollbar {
+	width: 7px;
+	height: 7px;
+}
+
+::-webkit-scrollbar-track {
+	background: rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb {
+	background: rgba(130, 145, 160, 0.35);
+	border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: rgba(150, 165, 180, 0.5);
+}
+
+
+/* 태블릿 */
+
+@media (max-width: 1000px) {
+
+	body {
+		padding: 25px;
+	}
+
+	.total-players-frame,
+	.successful-frame,
+	.failed-frame {
+		width: 30%;
+		margin-right: 2.5%;
+	}
+
+	.failed-frame {
+		margin-right: 0;
+	}
+
+	.successful-rate-frame,
+	.average-comprehension-frame {
+		width: 46.25%;
+		margin-right: 0;
+	}
+
+	.successful-rate-frame {
+		margin-right: 2.5%;
+	}
+
+	.room-statistics-frame,
+	.object-statistics-frame {
+		width: 46.25%;
+		margin-right: 0;
+	}
+
+	.room-statistics-frame {
+		margin-right: 2.5%;
+	}
+}
+
+
+/* 모바일 */
+
+@media (max-width: 750px) {
+
+	body {
+		padding: 20px;
+	}
+
+	.title {
+		font-size: 24px;
+	}
+
+	.sub-title {
+		margin-bottom: 20px;
+	}
+
+	.total-players-frame,
+	.successful-frame,
+	.failed-frame {
+		float: none;
+		display: block;
+		width: 100%;
+		height: 90px;
+		margin-right: 0;
+		margin-bottom: 10px;
+	}
+
+	.total-players-frame label:last-child,
+	.successful-frame label:last-child,
+	.failed-frame label:last-child {
+		font-size: 25px;
+	}
+
+	.successful-rate-frame,
+	.average-comprehension-frame {
+		float: none;
+		display: block;
+		width: 100%;
+		height: 90px;
+		margin-right: 0;
+		margin-top: 10px;
+	}
+
+	.successful-rate-frame label:last-child,
+	.average-comprehension-frame label:last-child {
+		font-size: 24px;
+	}
+
+	h3 {
+		margin-top: 30px;
+		transform: translateY(30px);
+		font-size: 16px;
+	}
+
+	.room-statistics-frame,
+	.object-statistics-frame {
+		float: none;
+		display: block;
+		width: 100%;
+		margin-right: 0;
+		margin-bottom: 15px;
+		min-height: 0;
+		transform: translateY(30px);
+	}
+}
+
+
+/* 작은 모바일 */
+
+@media (max-width: 500px) {
+
+	body {
+		padding: 15px;
+	}
+
+	.title {
+		font-size: 21px;
+	}
+
+	.sub-title {
+		font-size: 12px;
+	}
+
+	.total-players-frame,
+	.successful-frame,
+	.failed-frame {
+		height: 80px;
+		padding: 15px;
+	}
+
+	.total-players-frame label:first-child,
+	.successful-frame label:first-child,
+	.failed-frame label:first-child {
+		font-size: 12px;
+	}
+
+	.total-players-frame label:last-child,
+	.successful-frame label:last-child,
+	.failed-frame label:last-child {
+		font-size: 22px;
+	}
+
+	.successful-rate-frame,
+	.average-comprehension-frame {
+		height: 80px;
+		padding: 15px;
+	}
+
+	.successful-rate-frame label:first-child,
+	.average-comprehension-frame label:first-child {
+		font-size: 12px;
+	}
+
+	.successful-rate-frame label:last-child,
+	.average-comprehension-frame label:last-child {
+		font-size: 22px;
+	}
+
+	h3 {
+		font-size: 14px;
+		transform: translateY(30px);
+	}
+
+	.room-statistics-frame,
+	.object-statistics-frame {
+		padding: 15px;
+		transform: translateY(30px);
+	}
+
+	.room-statistics-frame > label,
+	.object-statistics-frame > label {
+		font-size: 14px;
+	}
+
+	.room-statistics-frame td {
+		height: 36px;
+		font-size: 11px;
+	}
+
+	.object-statistics-frame td {
+		height: 36px;
+		font-size: 10px;
+	}
+
+	.object-statistics-frame tr:first-child td {
+		font-size: 9px;
+	}
+}
