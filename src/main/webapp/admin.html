@@ -1,0 +1,44 @@
+<!-- 관리자 전용 페이지 -->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>[관리자 전용] 동래구 기록 복구 프로젝트</title>
+		<style>
+			.analysis-frame {
+				width: 75%;
+				height: 75%;
+				border: none;
+			}
+		</style>
+		<link rel="stylesheet" href="css/admin.css">
+	</head>
+	<body>
+		<!-- 배경화면 -->
+		<img class="background-image"
+				src="assets/images/backgrounds/main_theme_background.jpg">
+
+		<!-- 제목 프레임 -->
+		<div class="title-frame">
+			<h1>동래구 기록 복구 프로젝트</h1>
+			<h2>사용자 관리 시스템</h2>
+		</div>
+		
+		<!-- 메뉴바 -->
+		<div class="menu-bar">
+			<label>Admin Menu</label><br>
+			<input type="submit" name="menu" value="대시보드"><br>
+			<input type="submit" name="menu" value="사용자 조회"><br>
+			<input type="submit" name="menu" value="플레이 기록"><br>
+			<input type="submit" name="menu" value="게임 통계">
+		</div>
+		
+		<!-- 분석 프레임 -->
+		<iframe class="analysis-frame" src="dashboard">
+		</iframe>
+
+		<!-- javascript 연결 -->
+		<script src="js/admin.js"></script>
+	</body>
+</html>

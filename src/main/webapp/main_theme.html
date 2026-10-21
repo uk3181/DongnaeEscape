@@ -1,0 +1,44 @@
+<!-- 게임 시작 화면 -->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/main_theme.css">
+	</head>
+	<body>
+		<!-- 제목 -->
+		<label class="game-title">동래구 기록 복구 프로젝트</label><br>
+		<!-- 부제목 -->
+		<label class="game-subtitle">미래 붕괴 도시</label><br>
+		<!-- 게임 설명 -->
+		<label class="game-description">붕괴된 미래의 동래구에서 사라진 기록을 복구하라.</label>
+		
+		<!-- 1365 ID 입력 엔트리 -->
+		<label class="id-label">1365 ID</label>
+		<input name="id" maxlength="20">
+		
+		<!-- 게임 시작 -->
+		<input class="start-button" type="submit" id="button" value="게임 시작"><br>
+		
+		<!-- 음원 재생 버튼 -->
+		<input class="sound-button" id="assets/sounds/bgms/main_theme_bgm.mp3"
+				type="image" src="assets/images/icons/muted_sound_icon.png">
+		
+		<label class="developer">제작자: 정재욱</label>
+		
+		<!-- Sound 버튼 연결 -->
+		<script src="js/sound_button.js"></script>
+		<!-- BGM Audio 연결 -->
+		<script src="js/bgm_audio.js"></script>
+
+		<!-- SFX Manager 연결 -->
+		<script src="js/sfx_manager.js"></script>
+		
+		<!-- Session Storage Manager 연결 -->
+		<script src="js/session_storage_manager.js"></script>
+
+		<!-- main_theme javascript 연결 -->
+		<script src="js/main_theme.js"></script>
+	</body>
+</html>
