@@ -1,1 +1,152 @@
+# 동래구 기록 복구 프로젝트
+동래구 기록 복구 프로젝트는 봉사자가 봉사 정신을 함양할 수 있도록 방탈출 게임 형식으로 제작된 웹 기반 교육용 프로그램이다. 관리자는 각 봉사자별 게임 플레이 기록을 분석할 수 있다.
 
+## 프로젝트 개요
+본 시스템은 일반 사용자(학생)를 대상으로 다양한 학습 도구를 하나의 애플리케이션에서 이용할 수 있도록 설계되었다.
+### 주요 특징
+- **학습 시간 기록**: 과목별 학습 시간을 기록하고 저장한다.
+- **학습 시간 분석**: 날짜별·과목별로 학습 시간, 휴식 시간, 집중도를 분석한다.
+- **성적 분석**: 입력된 성적 데이터를 과목 및 날짜별로 분석하고, 선형 회귀 모델을 이용하여 향후 성적을 예측한다.
+- **리마인더**: 지정된 날짜에 메모를 입력하고 해당 날짜가 되면 사용자에게 리마인더 알림으로 알려준다.
+
+## 시스템 요구사항
+### 운영 체제
+- Windows, MacOS, Linux, Android, iOS
+### 개발 환경
+- **언어**: Java, HTML, CSS, JavaScript
+- **사용 기술**: JSP
+- **Database**: Oracle
+- **플랫폼**: 웹 애플리케이션
+### 라이브러리
+| 라이브러리 | 유형 | 용도 |
+|-----------|------|------|
+| tkinter | 표준 | GUI 프레임워크 (버튼, 레이블, 엔트리 등) |
+| sortedcontainers | 외부 | 정렬된 상태의 데이터 관리 |
+| datetime | 표준 | 날짜 및 시간 처리 |
+| matplotlib | 외부 | 학습·성적 데이터 그래프 시각화 |
+| math | 표준 | 수학 계산 처리 |
+| numpy | 외부 | 숫자·배열의 빠른 계산 처리 |
+| sklearn.linear_model | 외부 | 선형 회귀 모델을 이용한 성적 예측 |
+| pathlib | 표준 | 파일과 폴더의 경로 관리 |
+| pickle | 표준 | Python 객체의 직렬화 및 역직렬화 |
+
+## 설치 및 실행
+### 1. 애플리케이션 설치
+- (1) 다운로드: [Installer 다운로드 링크](https://github.com/uk3181/J-Study-Checker/releases/download/v1.0/J.Study.Checker.Installer.exe)
+- (2) 설치: J.Study.Checker.Installer.exe 실행 후 안내에 따라 설치 진행
+### 2. 애플리케이션 실행
+- Windows 시작 메뉴에서 앱 J Study Checker를 찾아서 실행
+
+## 프로젝트 구조
+```
+J-Study-Checker/
+├── .github/
+│   └── workflows/
+│       └── build.yml
+├── Datas/ # 사용자 및 학습 데이터 저장
+│   └── user_list.bin # 시스템의 데이터를 이진 파일로 관리함.
+├── Fonts/
+│   └── NanumGothic/
+│       └── NanumGothic/
+│           ├── NanumGothic.otf
+│           ├── NanumGothic.ttf
+│           ├── NanumGothicBold.otf
+│           ├── NanumGothicBold.ttf
+│           ├── NanumGothicExtraBold.otf
+│           ├── NanumGothicExtraBold.ttf
+│           ├── NanumGothicLight.otf
+│           └── NanumGothicLight.ttf
+├── Images/
+│   ├── Backgrounds/ # 각 프레임의 배경화면
+│   │   ├── analysis_grades_background.png
+│   │   ├── analysis_study_background.png
+│   │   ├── calculator_background.png
+│   │   ├── home_background.png
+│   │   ├── login_background.png
+│   │   ├── notification_background.png
+│   │   ├── register_background.png
+│   │   ├── reminder_background.png
+│   │   ├── stopwatch_background.png
+│   │   ├── study_background.png
+│   │   ├── study_calendar_background.png
+│   │   ├── time_table_background.png
+│   │   ├── timer_background.png
+│   │   └── user_background.png
+│   ├── Graphs/ # 학습 및 성적 데이터를 시각화한 그래프
+│   │   ├── break_time_per_days_graph.png
+│   │   ├── break_time_per_subjects_graph.png
+│   │   ├── focus_rate_per_days_graph.png
+│   │   ├── focus_rate_per_subjects_graph.png
+│   │   ├── grade_data_graph.png
+│   │   ├── studying_time_per_days_graph.png
+│   │   └── studying_time_per_subjects_graph.png
+│   └── Icons/ # 애플리케이션 및 각 버튼의 아이콘
+│   │   ├── app_icon.png
+│   │   ├── custom_timer_button_1.png
+│   │   ├── custom_timer_button_2.png
+│   │   ├── five_minutes_timer_button_1.png
+│   │   ├── five_minutes_timer_button_2.png
+│   │   ├── notification_icon_1.png
+│   │   ├── notification_icon_2.png
+│   │   ├── one_minute_timer_button_1.png
+│   │   ├── one_minute_timer_button_2.png
+│   │   ├── ten_minutes_timer_button_1.png
+│   │   ├── ten_minutes_timer_button_2.png
+│   │   ├── user_icon_1.png
+│   │   └── user_icon_2.png
+├── SourceCodes/ # 프로그램의 주요 GUI 및 기능 구현
+│   ├── analysis_grades_frame.py # 성적 분석 프레임
+│   ├── analysis_grades.py # 성적 분석 시스템 - 성적 예측, 성적 분석 그래프 생성 등
+│   ├── analysis_study.py # 학습 분석 시스템 - 학습 분석 그래프 생성 등
+│   ├── analysis_study_frame.py # 학습 분석 프레임
+│   ├── app.py # 최종적으로 실행되는 앱
+│   ├── calculator_frame.py # 계산기 프레임
+│   ├── home_frame.py # 홈 프레임 - 시스템의 다양한 기능을 선택하여 실행시킬 수 있음.
+│   ├── login_frame.py # 로그인 프레임 - 앱을 실행하였을 때 나타남.
+│   ├── menu_button.py # 메뉴 버튼 UI 구현
+│   ├── notification_frame.py # 알림 프레임
+│   ├── notification_system.py # 알림 시스템 - 리마인더 알림 업데이트, 사용자 정보 변경 알림 업데이트
+│   ├── path_settings.py # 모든 소스코드의 기본 경로를 설정함.
+│   ├── register_frame.py # 회원가입 프레임
+│   ├── reminder_frame.py # 리마인더 프레임
+│   ├── reset_file.py # 시스템의 데이터를 초기화하는 코드
+│   ├── stopwatch_frame.py # 스톱워치 프레임
+│   ├── study_frame.py # 학습 프레임
+│   ├── time_table_frame.py # 요일별 학습 시간을 보여주는 프레임
+│   ├── timer_frame.py # 타이머 프레임
+│   ├── user.py # 사용자 클래스 및 시스템 - 사용자 추가, 수정, 삭제
+│   └── user_frame.py # 사용자 프레임
+├── README.md
+├── System Modeling and Design.pdf
+├── System Requirements Specification.pdf
+└── privacy-policy.html
+```
+
+## 사용자 유형별 기능
+### 일반 사용자(봉사자)
+- 1365 사이트에 가입되어 있는 ID가 존재하며, 기본적인 컴퓨터 사용 및 GUI 조작 능력을 갖추고 있다.
+- 각 방의 각 오브젝트에 해당하는 문제를 해결할 수 있다.
+- 게임 진행 상황을 확인할 수 있다.
+### 관리자
+- 기본적인 컴퓨터 사용 및 GUI 조작 능력을 갖추고 있다.
+- 대시보드 확인: 게임 성공·실패 인원, 최근 게임 기록 등 시스템에서 제공하는 전반적인 게임 진행 상황을 확인할 수 있다.
+- 사용자 조회: 시스템에서 제공하는 검색된 세부 게임 진행 상황을 1365의 ID 별로 확인할 수 있다.
+- 플레이 기록: 시스템에서 제공하는 최근 플레이어의 플레이 기록을 확인할 수 있다. 관리자는 1365의 ID 및 게임 성공 여부를 기준으로 화면에 표시되는 항목을 필터링 할 수 있다.
+- 플레이 통계: 게임 성공률 및 실패율, 방별·오브젝트별 해결 현황 등 시스템에서 제공하는 게임 플레이의 세부적인 데이터를 확인할 수 있다.
+
+## 주요 클래스
+| 클래스 | 설명 |
+|--------|------|
+| `User` | 사용자의 기본 정보: ID, 비밀번호, 이름, 나이, 성별, 학습 데이터 목록, 성적 데이터 목록 등 |
+| `StudyData` | 학습 데이터: 날짜, 과목명, 학습 시간 등 |
+| `GradeData` | 성적 데이터: 날짜, 점수 등 |
+| `ReminderData` | 리마인더 데이터: 날짜, 메모 |
+
+## 개발자
+| 이름 | GitHub |
+|------|--------|
+| 정재욱 | [@uk3181](https://github.com/uk3181) |
+
+## 라이선스
+Copyright © 2026 J Study Checker. All rights reserved.<br>
+본 프로젝트의 소스 코드는 교육 목적으로 작성되었으며, 저작권자의 사전 허가 없이 복제, 수정, 배포 및 상업적 이용을 할 수 없다.
