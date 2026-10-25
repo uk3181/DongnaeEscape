@@ -224,5 +224,5 @@ DongnaeEscape/
 | 정재욱 | [@uk3181](https://github.com/uk3181) | JAVA, HTML, JavaScript 대부분(admin.js, bgm_audio.js, chat.js, main_theme.js, problem_set.js, session_storage.js, sfx_manager.js, sound_button.js, timer.js), SQL 개발 |
 
 ## 라이선스
-Copyright © 2026 J DongnaeEscape. All rights reserved.<br>
+Copyright © 2026 DongnaeEscape. All rights reserved.<br>
 본 프로젝트의 소스 코드는 교육 목적으로 작성되었으며, 저작권자의 사전 허가 없이 복제, 수정, 배포 및 상업적 이용을 할 수 없다.
