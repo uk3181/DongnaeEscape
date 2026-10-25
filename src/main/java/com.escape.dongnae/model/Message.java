@@ -7,7 +7,7 @@ interface MessageInterface {
 	/* ------------------------------------------------------- */
 }
 
-// 메시지 클래스
+// 메시지 데이터를 관리하는 모델
 public class Message implements MessageInterface {
 	// 사용자 구분 - 시스템, 진행요원, 주인공
 	public static byte SYSTEM = 0, STAFF = 1, PLAYER = 2;
