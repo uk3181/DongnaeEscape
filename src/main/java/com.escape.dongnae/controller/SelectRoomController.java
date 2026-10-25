@@ -12,7 +12,7 @@ interface SelectRoomControllerInterface {
 	public abstract boolean cleared3Rooms(PlayerInfo playerInfo);
 }
 
-// 플레이어로부터 각 방을 해결했는지 여부를 알아내어, 문의 상태를 정함.
+// 플레이어로부터 각 방을 해결했는지 여부를 알아내어, 문의 상태를 정하는 컨트롤러
 @WebServlet("/select-room")
 public class SelectRoomController extends HttpServlet implements SelectRoomControllerInterface {
 	@Override
