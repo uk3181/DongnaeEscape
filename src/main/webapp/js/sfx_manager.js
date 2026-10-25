@@ -1,5 +1,4 @@
 // SFX를 관리하는 클래스
-
 class SFXManager {
 	constructor(sfxAudio, buttonElements, answerButtonElements,
 			doorElements, objectElements) {
