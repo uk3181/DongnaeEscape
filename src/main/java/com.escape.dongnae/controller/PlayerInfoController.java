@@ -14,6 +14,7 @@ import java.io.*;
 
 import com.escape.dongnae.model.PlayerInfo;
 
+// 플레이어의 정보를 설정하는 컨트롤러
 public class PlayerInfoController {
 	// 상태창(플레이어의 정보)을 설정하는 메소드
 	public static void printPlayerInfo(HttpServletRequest request,
