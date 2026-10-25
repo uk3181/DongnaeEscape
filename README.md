@@ -48,7 +48,7 @@
 - **Backend**: Java, JSP, Servlet
 - **Database**: Oracle SQL
 - **Server**: Apache Tomcat
-- **플랫폼**: 웹 어플리케이션
+- **Platform**: 웹 어플리케이션
 
 ## 배포 환경
 - **Hosting**: AWS EC2
