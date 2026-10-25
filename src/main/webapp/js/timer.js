@@ -1,4 +1,4 @@
-// 타이머 설정
+// 타이머 설정 코드
 
 class Timer {
 	constructor(leftTimeLi) {
