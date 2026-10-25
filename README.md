@@ -58,10 +58,9 @@
 DongnaeEscape/
 └── src/
     └── main/
-        ├── java
-        ├── resources
-        │   ├── com.dongnae.escape
-        │   │   ├── controller
+        ├── java/
+        │   ├── com.dongnae.escape/
+        │   │   ├── controller/
         │   │   │   ├── AdminController.java # 관리자용 페이지를 구성하는 컨트롤러
         │   │   │   ├── ChatController.java # 진행요원(서연)과 주인공(플레이어) 간의 대화 내용을 설정하는 컨트롤러
         │   │   │   ├── CheckAnswerController.java # 플레이어가 선택한 보기가 정답인지 확인하는 컨트롤러
@@ -81,10 +80,24 @@ DongnaeEscape/
         │   │   │   ├── SelectRoomController.java # 플레이어로부터 각 방을 해결했는지 여부를 알아내어, 문의 상태를 정하는 컨트롤러
         │   │   │   ├── ShowInfoController.java # 어떤 오브젝트를 클릭해야 하는지 알려주는 컨트롤러
         │   │   │   └── TimerController.java # 타이머의 남은 시간을 세션의 플레이어의 정보에 저장하는 컨트롤러
-        │   │   ├── dao
-        │   │   └── model
-        │   └── filter
-        └── webapp
+        │   │   ├── dao/
+        │   │   │   ├── ChatDAO.java # 채팅 데이터를 처리하는 DAO
+        │   │   │   ├── PlayerInfoDAO.java # 플레이어의 정보를 관리하는 DAO
+        │   │   │   └── ProblemSetDAO.java # 문제 데이터를 처리하는 DAO
+        │   │   └── model/
+        │   │       ├── Chat.java # 각 사용자 간의 대화 내용을 관리하는 모델
+        │   │       ├── Message.java # 메시지 데이터를 관리하는 모델
+        │   │       ├── PlayerInfo.java # 메시지 데이터를 관리하는 모델
+        │   │       └── ProblemSet.java # 문제 데이터를 관리하는 모델
+        │   └── filter/
+        │       └── CharacterEncodingFilter.java
+        ├── resources/
+        │   └── sql/
+        │       ├── chat_data.sql # 각 채팅 데이터를 저장함.
+        │       ├── problem_set_data.sql # 각 문제의 데이터를 저장함.
+        │       ├── table.sql
+        │       └── tablespace.sql
+        └── webapp/
 ```
 
 ## 시스템 요구사항
