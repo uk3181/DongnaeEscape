@@ -11,7 +11,7 @@ interface ProblemSetInterface {
 	/* ------------------------------------------------------- */
 }
 
-// 문제 데이터를 저장하기 위한 클래스
+// 문제 데이터를 관리하는 모델
 public class ProblemSet implements ProblemSetInterface {
 	private String question; // 문제
 	private Vector<String> choices; // 보기 목록
