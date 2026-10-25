@@ -1,5 +1,4 @@
 // Sound 버튼을 관리하는 클래스
-
 class SoundButton {
 	constructor(bgmAudio, soundButton) {
 		// BGM을 관리하는 audio
