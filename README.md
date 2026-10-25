@@ -165,6 +165,22 @@ DongnaeEscape/
             │           ├── click_object_sfx.mp3 # 각 방의 각 오브젝트를 클릭했을 때의 SFX
             │           └── left_time_sfx.mp3 # 시간 압박 대사가 나타날 때의 SFX
             ├── css/
+            │   ├── admin.css # 관리자 전용 페이지 스타일 시트
+            │   ├── chat.css # 주인공과 진행요원 간의 대화 내용을 보여주는 페이지 스타일 시트
+            │   ├── dashboard.css # 관리자 전용 페이지 - 대시보드 스타일 시트
+            │   ├── ending.css # 엔딩 페이지 스타일 시트
+            │   ├── input_answer.css # 최종 정답을 입력하는 페이지 스타일 시트
+            │   ├── main_theme.css # 게임 시작 화면 스타일 시트
+            │   ├── play_records.css # 관리자 전용 페이지 - 플레이 기록 스타일 시트
+            │   ├── play_statistics.css # 관리자 전용 페이지 - 플레이 통계 스타일 시트
+            │   ├── problem_result.css # 문제 풀이의 결과(정답/오답)를 보여주는 페이지 스타일 시트
+            │   ├── problem_set.css # 문제를 푸는 페이지 스타일 시트
+            │   ├── room1.css # 첫 번째 방(동래읍성) 스타일 시트
+            │   ├── room2.css # 두 번째 방(동래시장) 스타일 시트
+            │   ├── room3.css # 세 번째 방(온천천) 스타일 시트
+            │   ├── room4.css # 네 번째 방(자원봉사센터) 스타일 시트
+            │   ├── select_room.css # 4개의 각 방으로 들어갈 수 있도록 해주는 페이지 스타일 시트
+            │   └── user.css # 관리자 전용 페이지 - 사용자 조회 스타일 시트
             ├── js/
             ├── admin.html # 관리자 전용 페이지
             ├── chat.jsp # 주인공과 진행요원 간의 대화 내용을 보여주는 페이지
