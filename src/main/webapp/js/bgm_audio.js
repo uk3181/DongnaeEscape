@@ -1,4 +1,4 @@
-// BGM Audio를 관리함.
+// BGM Audio를 관리하는 코드
 
 class BGMAudio {
 	constructor(bgmAudio, soundButton) {
