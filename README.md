@@ -99,8 +99,71 @@ DongnaeEscape/
         │       └── tablespace.sql
         └── webapp/
             ├── META-INF/
+            │   └── MANIFEST.MF
             ├── WEB-INF/
-            ├── assets
+            │   ├── lib/
+            │   │   └── ojdbc17.jar
+            │   └── web.xml
+            ├── assets/
+            │   ├── images/
+            │   │   ├── backgrounds/
+            │   │   │   ├── chat_background.jpg # 채팅 페이지 배경
+            │   │   │   ├── cleared_door_background.jpg # 해결을 완료한 방의 문
+            │   │   │   ├── closed_door_background.jpg # 미해결 상태이고 들어갈 수 없는 방의 문
+            │   │   │   ├── enter_door_background.jpg # 미해결 상태이고 들어갈 수 있는 방의 문
+            │   │   │   ├── failed_background.jpg # 게임 실패 엔딩 배경
+            │   │   │   ├── main_theme_background.jpg # 게임 시작 배경
+            │   │   │   ├── player_background.jpg # 채팅 페이지에 표시되는 플레이어 이미지
+            │   │   │   ├── problem_set_background.jpg # 문제 풀이 배경
+            │   │   │   ├── room1_background.jpg # 첫 번째 방(동래읍성) 배경
+            │   │   │   ├── room1_object1_background.png # 첫 번째 방 - 1번 오브젝트
+            │   │   │   ├── room1_object2_background.png # 첫 번째 방 - 2번 오브젝트
+            │   │   │   ├── room1_object3_background.png # 첫 번째 방 - 3번 오브젝트
+            │   │   │   ├── room1_object4_background.png # 첫 번째 방 - 4번 오브젝트
+            │   │   │   ├── room1_object5_background.png # 첫 번째 방 - 5번 오브젝트
+            │   │   │   ├── room2_background.jpg # 두 번째 방(동래시장) 배경
+            │   │   │   ├── room2_object1_background.png # 두 번째 방 - 1번 오브젝트
+            │   │   │   ├── room2_object2_background.png # 두 번째 방 - 2번 오브젝트
+            │   │   │   ├── room2_object3_background.png # 두 번째 방 - 3번 오브젝트
+            │   │   │   ├── room2_object4_background.png # 두 번째 방 - 4번 오브젝트
+            │   │   │   ├── room2_object5_background.png # 두 번째 방 - 5번 오브젝트
+            │   │   │   ├── room3_background.jpg # 세 번째 방(온천천) 배경
+            │   │   │   ├── room3_object1_background.png # 세 번째 방 - 1번 오브젝트
+            │   │   │   ├── room3_object2_background.png # 세 번째 방 - 2번 오브젝트
+            │   │   │   ├── room3_object3_background.png # 세 번째 방 - 3번 오브젝트
+            │   │   │   ├── room3_object4_background.png # 세 번째 방 - 4번 오브젝트
+            │   │   │   ├── room3_object5_background.png # 세 번째 방 - 5번 오브젝트
+            │   │   │   ├── room4_background.jpg # 네 번째 방(자원봉사센터) 배경
+            │   │   │   ├── room4_object1_background.png # 네 번째 방 - 1번 오브젝트
+            │   │   │   ├── room4_object2_background.png # 네 번째 방 - 2번 오브젝트
+            │   │   │   ├── room4_object3_background.png # 네 번째 방 - 3번 오브젝트
+            │   │   │   ├── room4_object4_background.png # 네 번째 방 - 4번 오브젝트
+            │   │   │   ├── room4_object5_background.png # 네 번째 방 - 5번 오브젝트
+            │   │   │   ├── rooms_background.jpg # 각 방을 입장할 수 있는 공간의 배경
+            │   │   │   ├── staff_background.jpg # 채팅 페이지에 표시되는 진행요원 이미지
+            │   │   │   ├── successful_background.jpg # 게임 성공 엔딩 배경
+            │   │   │   ├── system_background.jpg 채팅 페이지에 표시되는 시스템 이미지
+            │   │   └── icons/
+            │   │       ├── info_icon.png # 게임 진행에 필요한 정보 버튼 아이콘
+            │   │       ├── muted_sound_icon.png # 음소거 상태의 버튼 아이콘
+            │   │       └── unmuted_sound_icon.png # 음소거 해제 상태의 버튼 아이콘
+            │   └── sounds/
+            │       ├── bgms/
+            │       │   ├── chat_theme_bgm.mp3 # 채팅 BGM
+            │       │   ├── failed_bgm.mp3 # 게임 실패 엔딩 BGM
+            │       │   ├── main_theme_bgm.mp3 # 게임 시작 BGM
+            │       │   ├── room1_bgm.mp3 # 첫 번째 방(동래읍성) BGM
+            │       │   ├── room2_bgm.mp3 # 두 번째 방(동래시장) BGM
+            │       │   ├── room3_bgm.mp3 # 세 번째 방(온천천) BGM
+            │       │   ├── room4_bgm.mp3 # 네 벙째 방(자원봉사센터) BGM
+            │       │   ├── select_room_theme_bgm.mp3 # 각 방을 입장할 수 있는 공간 BGM
+            │       │   └── successful_bgm.mp3 # 게임 성공 엔딩 BGM
+            │       └── sfxs/
+            │           ├── answer_sfx.mp3 # 문제 해결에 성공했을 때의 SFX
+            │           ├── click_button_sfx.mp3 # 각종 버튼을 클릭했을 때의 SFX
+            │           ├── click_door_sfx.mp3 # 각 방을 입장할 수 있는 공간에서 방 문을 클릭했을 때의 SFX
+            │           ├── click_object_sfx.mp3 # 각 방의 각 오브젝트를 클릭했을 때의 SFX
+            │           └── left_time_sfx.mp3 # 시간 압박 대사가 나타날 때의 SFX
             ├── css/
             ├── js/
             ├── admin.html # 관리자 전용 페이지
