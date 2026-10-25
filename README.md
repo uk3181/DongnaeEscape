@@ -56,146 +56,157 @@
 ## 프로젝트 구조
 ```
 DongnaeEscape/
-└── src/
-    └── main/
-        ├── java/
-        │   ├── com.dongnae.escape/
-        │   │   ├── controller/
-        │   │   │   ├── AdminController.java # 관리자용 페이지를 구성하는 컨트롤러
-        │   │   │   ├── ChatController.java # 진행요원(서연)과 주인공(플레이어) 간의 대화 내용을 설정하는 컨트롤러
-        │   │   │   ├── CheckAnswerController.java # 플레이어가 선택한 보기가 정답인지 확인하는 컨트롤러
-        │   │   │   ├── CheckInputAnswerController.java # 입력된 최종 정답을 확인하는 컨트롤러
-        │   │   │   ├── DashboardController.java # 대시보드 구성 컨트롤러
-        │   │   │   ├── EndingController.java # 엔딩 페이지를 설정하는 컨트롤러
-        │   │   │   ├── GameController.java # 게임 시작과 동시에 4개의 방이 있는 공간으로 이동함.
-        │   │   │   ├── GoToEndingController.java # 채팅 페이지, 엔딩 페이지로 순차적으로 이동하는 컨트롤러
-        │   │   │   ├── HintController.java # 힌트를 보여주기 위한 컨트롤러
-        │   │   │   ├── InputAnswerController.java # 최종 정답을 입력할 수 있도록 구성하는 컨트롤러
-        │   │   │   ├── PlayStatisticsController.java # 플레이 통게 페이지를 구성하는 컨트롤러
-        │   │   │   ├── PlayerInfoController.java # 플레이어의 정보를 설정하는 컨트롤러
-        │   │   │   ├── ProblemSetController.java # 플레이어의 정보를 설정하는 컨트롤러
-        │   │   │   ├── RoomController.java # 플레이어의 정보를 설정하는 컨트롤러
-        │   │   │   ├── SearchPlayRecordsController.java # 플레이 기록을 검색하는 컨트롤러
-        │   │   │   ├── SearchUserController.java # 사용자 조회 페이지 구성 컨트롤러
-        │   │   │   ├── SelectRoomController.java # 플레이어로부터 각 방을 해결했는지 여부를 알아내어, 문의 상태를 정하는 컨트롤러
-        │   │   │   ├── ShowInfoController.java # 어떤 오브젝트를 클릭해야 하는지 알려주는 컨트롤러
-        │   │   │   └── TimerController.java # 타이머의 남은 시간을 세션의 플레이어의 정보에 저장하는 컨트롤러
-        │   │   ├── dao/
-        │   │   │   ├── ChatDAO.java # 채팅 데이터를 처리하는 DAO
-        │   │   │   ├── PlayerInfoDAO.java # 플레이어의 정보를 관리하는 DAO
-        │   │   │   └── ProblemSetDAO.java # 문제 데이터를 처리하는 DAO
-        │   │   └── model/
-        │   │       ├── Chat.java # 각 사용자 간의 대화 내용을 관리하는 모델
-        │   │       ├── Message.java # 메시지 데이터를 관리하는 모델
-        │   │       ├── PlayerInfo.java # 메시지 데이터를 관리하는 모델
-        │   │       └── ProblemSet.java # 문제 데이터를 관리하는 모델
-        │   └── filter/
-        │       └── CharacterEncodingFilter.java
-        ├── resources/
-        │   └── sql/
-        │       ├── chat_data.sql # 각 채팅 데이터를 저장함.
-        │       ├── problem_set_data.sql # 각 문제의 데이터를 저장함.
-        │       ├── table.sql
-        │       └── tablespace.sql
-        └── webapp/
-            ├── META-INF/
-            │   └── MANIFEST.MF
-            ├── WEB-INF/
-            │   ├── lib/
-            │   │   └── ojdbc17.jar
-            │   └── web.xml
-            ├── assets/
-            │   ├── images/
-            │   │   ├── backgrounds/
-            │   │   │   ├── chat_background.jpg # 채팅 페이지 배경
-            │   │   │   ├── cleared_door_background.jpg # 해결을 완료한 방의 문
-            │   │   │   ├── closed_door_background.jpg # 미해결 상태이고 들어갈 수 없는 방의 문
-            │   │   │   ├── enter_door_background.jpg # 미해결 상태이고 들어갈 수 있는 방의 문
-            │   │   │   ├── failed_background.jpg # 게임 실패 엔딩 배경
-            │   │   │   ├── main_theme_background.jpg # 게임 시작 배경
-            │   │   │   ├── player_background.jpg # 채팅 페이지에 표시되는 플레이어 이미지
-            │   │   │   ├── problem_set_background.jpg # 문제 풀이 배경
-            │   │   │   ├── room1_background.jpg # 첫 번째 방(동래읍성) 배경
-            │   │   │   ├── room1_object1_background.png # 첫 번째 방 - 1번 오브젝트
-            │   │   │   ├── room1_object2_background.png # 첫 번째 방 - 2번 오브젝트
-            │   │   │   ├── room1_object3_background.png # 첫 번째 방 - 3번 오브젝트
-            │   │   │   ├── room1_object4_background.png # 첫 번째 방 - 4번 오브젝트
-            │   │   │   ├── room1_object5_background.png # 첫 번째 방 - 5번 오브젝트
-            │   │   │   ├── room2_background.jpg # 두 번째 방(동래시장) 배경
-            │   │   │   ├── room2_object1_background.png # 두 번째 방 - 1번 오브젝트
-            │   │   │   ├── room2_object2_background.png # 두 번째 방 - 2번 오브젝트
-            │   │   │   ├── room2_object3_background.png # 두 번째 방 - 3번 오브젝트
-            │   │   │   ├── room2_object4_background.png # 두 번째 방 - 4번 오브젝트
-            │   │   │   ├── room2_object5_background.png # 두 번째 방 - 5번 오브젝트
-            │   │   │   ├── room3_background.jpg # 세 번째 방(온천천) 배경
-            │   │   │   ├── room3_object1_background.png # 세 번째 방 - 1번 오브젝트
-            │   │   │   ├── room3_object2_background.png # 세 번째 방 - 2번 오브젝트
-            │   │   │   ├── room3_object3_background.png # 세 번째 방 - 3번 오브젝트
-            │   │   │   ├── room3_object4_background.png # 세 번째 방 - 4번 오브젝트
-            │   │   │   ├── room3_object5_background.png # 세 번째 방 - 5번 오브젝트
-            │   │   │   ├── room4_background.jpg # 네 번째 방(자원봉사센터) 배경
-            │   │   │   ├── room4_object1_background.png # 네 번째 방 - 1번 오브젝트
-            │   │   │   ├── room4_object2_background.png # 네 번째 방 - 2번 오브젝트
-            │   │   │   ├── room4_object3_background.png # 네 번째 방 - 3번 오브젝트
-            │   │   │   ├── room4_object4_background.png # 네 번째 방 - 4번 오브젝트
-            │   │   │   ├── room4_object5_background.png # 네 번째 방 - 5번 오브젝트
-            │   │   │   ├── rooms_background.jpg # 각 방을 입장할 수 있는 공간의 배경
-            │   │   │   ├── staff_background.jpg # 채팅 페이지에 표시되는 진행요원 이미지
-            │   │   │   ├── successful_background.jpg # 게임 성공 엔딩 배경
-            │   │   │   ├── system_background.jpg 채팅 페이지에 표시되는 시스템 이미지
-            │   │   └── icons/
-            │   │       ├── info_icon.png # 게임 진행에 필요한 정보 버튼 아이콘
-            │   │       ├── muted_sound_icon.png # 음소거 상태의 버튼 아이콘
-            │   │       └── unmuted_sound_icon.png # 음소거 해제 상태의 버튼 아이콘
-            │   └── sounds/
-            │       ├── bgms/
-            │       │   ├── chat_theme_bgm.mp3 # 채팅 BGM
-            │       │   ├── failed_bgm.mp3 # 게임 실패 엔딩 BGM
-            │       │   ├── main_theme_bgm.mp3 # 게임 시작 BGM
-            │       │   ├── room1_bgm.mp3 # 첫 번째 방(동래읍성) BGM
-            │       │   ├── room2_bgm.mp3 # 두 번째 방(동래시장) BGM
-            │       │   ├── room3_bgm.mp3 # 세 번째 방(온천천) BGM
-            │       │   ├── room4_bgm.mp3 # 네 벙째 방(자원봉사센터) BGM
-            │       │   ├── select_room_theme_bgm.mp3 # 각 방을 입장할 수 있는 공간 BGM
-            │       │   └── successful_bgm.mp3 # 게임 성공 엔딩 BGM
-            │       └── sfxs/
-            │           ├── answer_sfx.mp3 # 문제 해결에 성공했을 때의 SFX
-            │           ├── click_button_sfx.mp3 # 각종 버튼을 클릭했을 때의 SFX
-            │           ├── click_door_sfx.mp3 # 각 방을 입장할 수 있는 공간에서 방 문을 클릭했을 때의 SFX
-            │           ├── click_object_sfx.mp3 # 각 방의 각 오브젝트를 클릭했을 때의 SFX
-            │           └── left_time_sfx.mp3 # 시간 압박 대사가 나타날 때의 SFX
-            ├── css/
-            │   ├── admin.css # 관리자 전용 페이지 스타일 시트
-            │   ├── chat.css # 주인공과 진행요원 간의 대화 내용을 보여주는 페이지 스타일 시트
-            │   ├── dashboard.css # 관리자 전용 페이지 - 대시보드 스타일 시트
-            │   ├── ending.css # 엔딩 페이지 스타일 시트
-            │   ├── input_answer.css # 최종 정답을 입력하는 페이지 스타일 시트
-            │   ├── main_theme.css # 게임 시작 화면 스타일 시트
-            │   ├── play_records.css # 관리자 전용 페이지 - 플레이 기록 스타일 시트
-            │   ├── play_statistics.css # 관리자 전용 페이지 - 플레이 통계 스타일 시트
-            │   ├── problem_result.css # 문제 풀이의 결과(정답/오답)를 보여주는 페이지 스타일 시트
-            │   ├── problem_set.css # 문제를 푸는 페이지 스타일 시트
-            │   ├── room1.css # 첫 번째 방(동래읍성) 스타일 시트
-            │   ├── room2.css # 두 번째 방(동래시장) 스타일 시트
-            │   ├── room3.css # 세 번째 방(온천천) 스타일 시트
-            │   ├── room4.css # 네 번째 방(자원봉사센터) 스타일 시트
-            │   ├── select_room.css # 4개의 각 방으로 들어갈 수 있도록 해주는 페이지 스타일 시트
-            │   └── user.css # 관리자 전용 페이지 - 사용자 조회 스타일 시트
-            ├── js/
-            ├── admin.html # 관리자 전용 페이지
-            ├── chat.jsp # 주인공과 진행요원 간의 대화 내용을 보여주는 페이지
-            ├── dashboard.jsp # 관리자 전용 페이지 - 대시보드
-            ├── ending.jsp # 엔딩 페이지
-            ├── index.html # 최종적으로 게임이 사용자에게 보여지는 페이지
-            ├── input_answer.jsp # 최종 정답을 입력하는 페이지
-            ├── main_theme.html # 게임 시작 화면
-            ├── play_records.jsp # 관리자 전용 페이지 - 플레이 기록
-            ├── play_statistics.jsp # 관리자 전용 페이지 - 플레이 통계
-            ├── problem_result.jsp # 문제 풀이의 결과(정답/오답)를 보여주는 페이지
-            ├── problem_set.jsp # 문제를 푸는 페이지
-            ├── room.jsp # 각 방의 모습을 구성하는 페이지
-            ├── select_room.jsp # 4개의 각 방으로 들어갈 수 있도록 해주는 페이지
-            └── user.jsp # 관리자 전용 페이지 - 사용자 조회
+├── src/
+│   └── main/
+│       ├── java/ # JAVA 코드
+│       │   ├── com.dongnae.escape/
+│       │   │   ├── controller/ # 컨트롤러
+│       │   │   │   ├── AdminController.java # 관리자용 페이지를 구성하는 컨트롤러
+│       │   │   │   ├── ChatController.java # 진행요원(서연)과 주인공(플레이어) 간의 대화 내용을 설정하는 컨트롤러
+│       │   │   │   ├── CheckAnswerController.java # 플레이어가 선택한 보기가 정답인지 확인하는 컨트롤러
+│       │   │   │   ├── CheckInputAnswerController.java # 입력된 최종 정답을 확인하는 컨트롤러
+│       │   │   │   ├── DashboardController.java # 대시보드 구성 컨트롤러
+│       │   │   │   ├── EndingController.java # 엔딩 페이지를 설정하는 컨트롤러
+│       │   │   │   ├── GameController.java # 게임 시작과 동시에 4개의 방이 있는 공간으로 이동함.
+│       │   │   │   ├── GoToEndingController.java # 채팅 페이지, 엔딩 페이지로 순차적으로 이동하는 컨트롤러
+│       │   │   │   ├── HintController.java # 힌트를 보여주기 위한 컨트롤러
+│       │   │   │   ├── InputAnswerController.java # 최종 정답을 입력할 수 있도록 구성하는 컨트롤러
+│       │   │   │   ├── PlayStatisticsController.java # 플레이 통게 페이지를 구성하는 컨트롤러
+│       │   │   │   ├── PlayerInfoController.java # 플레이어의 정보를 설정하는 컨트롤러
+│       │   │   │   ├── ProblemSetController.java # 문제 구성을 설정하는 컨트롤러
+│       │   │   │   ├── RoomController.java # 방의 구성을 설정하는 컨트롤러
+│       │   │   │   ├── SearchPlayRecordsController.java # 플레이 기록을 검색하는 컨트롤러
+│       │   │   │   ├── SearchUserController.java # 사용자 조회 페이지 구성 컨트롤러
+│       │   │   │   ├── SelectRoomController.java # 플레이어로부터 각 방을 해결했는지 여부를 알아내어, 문의 상태를 정하는 컨트롤러
+│       │   │   │   ├── ShowInfoController.java # 어떤 오브젝트를 클릭해야 하는지 알려주는 컨트롤러
+│       │   │   │   └── TimerController.java # 타이머의 남은 시간을 세션의 플레이어의 정보에 저장하는 컨트롤러
+│       │   │   ├── dao/ # dao
+│       │   │   │   ├── ChatDAO.java # 채팅 데이터를 처리하는 DAO
+│       │   │   │   ├── PlayerInfoDAO.java # 플레이어의 정보를 관리하는 DAO
+│       │   │   │   └── ProblemSetDAO.java # 문제 데이터를 처리하는 DAO
+│       │   │   └── model/ # 모델
+│       │   │       ├── Chat.java # 각 사용자 간의 대화 내용을 관리하는 모델
+│       │   │       ├── Message.java # 메시지 데이터를 관리하는 모델
+│       │   │       ├── PlayerInfo.java # 플레이어의 정보를 관리하는 모델
+│       │   │       └── ProblemSet.java # 문제 데이터를 관리하는 모델
+│       │   └── filter/ # 필터
+│       │       └── CharacterEncodingFilter.java
+│       ├── resources/
+│       │   └── sql/ # 데이터베이스 기본 설정
+│       │       ├── chat_data.sql # 각 채팅 데이터를 저장함.
+│       │       ├── problem_set_data.sql # 각 문제의 데이터를 저장함.
+│       │       ├── table.sql # 각종 테이블을 생성함.
+│       │       └── tablespace.sql # 테이블스페이스를 생성함.
+│       └── webapp/
+│           ├── META-INF/
+│           │   └── MANIFEST.MF
+│           ├── WEB-INF/
+│           │   ├── lib/
+│           │   │   └── ojdbc17.jar
+│           │   └── web.xml
+│           ├── assets/
+│           │   ├── images/ # 이미지
+│           │   │   ├── backgrounds/ # 배경
+│           │   │   │   ├── chat_background.jpg # 채팅 페이지 배경
+│           │   │   │   ├── cleared_door_background.jpg # 해결을 완료한 방의 문
+│           │   │   │   ├── closed_door_background.jpg # 미해결 상태이고 들어갈 수 없는 방의 문
+│           │   │   │   ├── enter_door_background.jpg # 미해결 상태이고 들어갈 수 있는 방의 문
+│           │   │   │   ├── failed_background.jpg # 게임 실패 엔딩 배경
+│           │   │   │   ├── main_theme_background.jpg # 게임 시작 배경
+│           │   │   │   ├── player_background.jpg # 채팅 페이지에 표시되는 플레이어 이미지
+│           │   │   │   ├── problem_set_background.jpg # 문제 풀이 배경
+│           │   │   │   ├── room1_background.jpg # 첫 번째 방(동래읍성) 배경
+│           │   │   │   ├── room1_object1_background.png # 첫 번째 방 - 1번 오브젝트
+│           │   │   │   ├── room1_object2_background.png # 첫 번째 방 - 2번 오브젝트
+│           │   │   │   ├── room1_object3_background.png # 첫 번째 방 - 3번 오브젝트
+│           │   │   │   ├── room1_object4_background.png # 첫 번째 방 - 4번 오브젝트
+│           │   │   │   ├── room1_object5_background.png # 첫 번째 방 - 5번 오브젝트
+│           │   │   │   ├── room2_background.jpg # 두 번째 방(동래시장) 배경
+│           │   │   │   ├── room2_object1_background.png # 두 번째 방 - 1번 오브젝트
+│           │   │   │   ├── room2_object2_background.png # 두 번째 방 - 2번 오브젝트
+│           │   │   │   ├── room2_object3_background.png # 두 번째 방 - 3번 오브젝트
+│           │   │   │   ├── room2_object4_background.png # 두 번째 방 - 4번 오브젝트
+│           │   │   │   ├── room2_object5_background.png # 두 번째 방 - 5번 오브젝트
+│           │   │   │   ├── room3_background.jpg # 세 번째 방(온천천) 배경
+│           │   │   │   ├── room3_object1_background.png # 세 번째 방 - 1번 오브젝트
+│           │   │   │   ├── room3_object2_background.png # 세 번째 방 - 2번 오브젝트
+│           │   │   │   ├── room3_object3_background.png # 세 번째 방 - 3번 오브젝트
+│           │   │   │   ├── room3_object4_background.png # 세 번째 방 - 4번 오브젝트
+│           │   │   │   ├── room3_object5_background.png # 세 번째 방 - 5번 오브젝트
+│           │   │   │   ├── room4_background.jpg # 네 번째 방(자원봉사센터) 배경
+│           │   │   │   ├── room4_object1_background.png # 네 번째 방 - 1번 오브젝트
+│           │   │   │   ├── room4_object2_background.png # 네 번째 방 - 2번 오브젝트
+│           │   │   │   ├── room4_object3_background.png # 네 번째 방 - 3번 오브젝트
+│           │   │   │   ├── room4_object4_background.png # 네 번째 방 - 4번 오브젝트
+│           │   │   │   ├── room4_object5_background.png # 네 번째 방 - 5번 오브젝트
+│           │   │   │   ├── rooms_background.jpg # 각 방을 입장할 수 있는 공간의 배경
+│           │   │   │   ├── staff_background.jpg # 채팅 페이지에 표시되는 진행요원 이미지
+│           │   │   │   ├── successful_background.jpg # 게임 성공 엔딩 배경
+│           │   │   │   ├── system_background.jpg 채팅 페이지에 표시되는 시스템 이미지
+│           │   │   └── icons/ # 아이곤
+│           │   │       ├── info_icon.png # 게임 진행에 필요한 정보 버튼 아이콘
+│           │   │       ├── muted_sound_icon.png # 음소거 상태의 버튼 아이콘
+│           │   │       └── unmuted_sound_icon.png # 음소거 해제 상태의 버튼 아이콘
+│           │   └── sounds/ # 사운드
+│           │       ├── bgms/ # BGM
+│           │       │   ├── chat_theme_bgm.mp3 # 채팅 BGM
+│           │       │   ├── failed_bgm.mp3 # 게임 실패 엔딩 BGM
+│           │       │   ├── main_theme_bgm.mp3 # 게임 시작 BGM
+│           │       │   ├── room1_bgm.mp3 # 첫 번째 방(동래읍성) BGM
+│           │       │   ├── room2_bgm.mp3 # 두 번째 방(동래시장) BGM
+│           │       │   ├── room3_bgm.mp3 # 세 번째 방(온천천) BGM
+│           │       │   ├── room4_bgm.mp3 # 네 벙째 방(자원봉사센터) BGM
+│           │       │   ├── select_room_theme_bgm.mp3 # 각 방을 입장할 수 있는 공간 BGM
+│           │       │   └── successful_bgm.mp3 # 게임 성공 엔딩 BGM
+│           │       └── sfxs/ # SFX
+│           │           ├── answer_sfx.mp3 # 문제 해결에 성공했을 때의 SFX
+│           │           ├── click_button_sfx.mp3 # 각종 버튼을 클릭했을 때의 SFX
+│           │           ├── click_door_sfx.mp3 # 각 방을 입장할 수 있는 공간에서 방 문을 클릭했을 때의 SFX
+│           │           ├── click_object_sfx.mp3 # 각 방의 각 오브젝트를 클릭했을 때의 SFX
+│           │           └── left_time_sfx.mp3 # 시간 압박 대사가 나타날 때의 SFX
+│           ├── css/ # 스타일 시트
+│           │   ├── admin.css # 관리자 전용 페이지 스타일 시트
+│           │   ├── chat.css # 주인공과 진행요원 간의 대화 내용을 보여주는 페이지 스타일 시트
+│           │   ├── dashboard.css # 관리자 전용 페이지 - 대시보드 스타일 시트
+│           │   ├── ending.css # 엔딩 페이지 스타일 시트
+│           │   ├── input_answer.css # 최종 정답을 입력하는 페이지 스타일 시트
+│           │   ├── main_theme.css # 게임 시작 화면 스타일 시트
+│           │   ├── play_records.css # 관리자 전용 페이지 - 플레이 기록 스타일 시트
+│           │   ├── play_statistics.css # 관리자 전용 페이지 - 플레이 통계 스타일 시트
+│           │   ├── problem_result.css # 문제 풀이의 결과(정답/오답)를 보여주는 페이지 스타일 시트
+│           │   ├── problem_set.css # 문제를 푸는 페이지 스타일 시트
+│           │   ├── room1.css # 첫 번째 방(동래읍성) 스타일 시트
+│           │   ├── room2.css # 두 번째 방(동래시장) 스타일 시트
+│           │   ├── room3.css # 세 번째 방(온천천) 스타일 시트
+│           │   ├── room4.css # 네 번째 방(자원봉사센터) 스타일 시트
+│           │   ├── select_room.css # 4개의 각 방으로 들어갈 수 있도록 해주는 페이지 스타일 시트
+│           │   └── user.css # 관리자 전용 페이지 - 사용자 조회 스타일 시트
+│           ├── js/ # JavaScript
+│           │   ├── admin.js # 관리자 전용 페이지 관련 코드
+│           │   ├── bgm_audio.js # BGM Audio를 관리하는 코드
+│           │   ├── chat.js # 채팅 페이지 관련 코드
+│           │   ├── main_theme.js # 메인 화면 관련 코드
+│           │   ├── problem_set.js # 문제를 푸는 페이지 관련 코드
+│           │   ├── screen_manager.js # 화면 전환 효과를 관리하는 코드
+│           │   ├── session_storage_manager.js # 세션 스토리지를 관리하는 코드
+│           │   ├── sfx_manager.js # SFX를 관리하는 코드
+│           │   ├── sound_button.js # 사운드 버튼을 관리하는 코드
+│           │   └── timer.js # 타이머 설정 코드
+│           ├── admin.html # 관리자 전용 페이지
+│           ├── chat.jsp # 주인공과 진행요원 간의 대화 내용을 보여주는 페이지
+│           ├── dashboard.jsp # 관리자 전용 페이지 - 대시보드
+│           ├── ending.jsp # 엔딩 페이지
+│           ├── index.html # 최종적으로 게임이 사용자에게 보여지는 페이지
+│           ├── input_answer.jsp # 최종 정답을 입력하는 페이지
+│           ├── main_theme.html # 게임 시작 화면
+│           ├── play_records.jsp # 관리자 전용 페이지 - 플레이 기록
+│           ├── play_statistics.jsp # 관리자 전용 페이지 - 플레이 통계
+│           ├── problem_result.jsp # 문제 풀이의 결과(정답/오답)를 보여주는 페이지
+│           ├── problem_set.jsp # 문제를 푸는 페이지
+│           ├── room.jsp # 각 방의 모습을 구성하는 페이지
+│           ├── select_room.jsp # 4개의 각 방으로 들어갈 수 있도록 해주는 페이지
+│           └── user.jsp # 관리자 전용 페이지 - 사용자 조회
+└── README.md
 ```
 
 ## 시스템 요구사항
