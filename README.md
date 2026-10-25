@@ -98,6 +98,25 @@ DongnaeEscape/
         │       ├── table.sql
         │       └── tablespace.sql
         └── webapp/
+            ├── META-INF/
+            ├── WEB-INF/
+            ├── assets
+            ├── css/
+            ├── js/
+            ├── admin.html # 관리자 전용 페이지
+            ├── chat.jsp # 주인공과 진행요원 간의 대화 내용을 보여주는 페이지
+            ├── dashboard.jsp # 관리자 전용 페이지 - 대시보드
+            ├── ending.jsp # 엔딩 페이지
+            ├── index.html # 최종적으로 게임이 사용자에게 보여지는 페이지
+            ├── input_answer.jsp # 최종 정답을 입력하는 페이지
+            ├── main_theme.html # 게임 시작 화면
+            ├── play_records.jsp # 관리자 전용 페이지 - 플레이 기록
+            ├── play_statistics.jsp # 관리자 전용 페이지 - 플레이 통계
+            ├── problem_result.jsp # 문제 풀이의 결과(정답/오답)를 보여주는 페이지
+            ├── problem_set.jsp # 문제를 푸는 페이지
+            ├── room.jsp # 각 방의 모습을 구성하는 페이지
+            ├── select_room.jsp # 4개의 각 방으로 들어갈 수 있도록 해주는 페이지
+            └── user.jsp # 관리자 전용 페이지 - 사용자 조회
 ```
 
 ## 시스템 요구사항
