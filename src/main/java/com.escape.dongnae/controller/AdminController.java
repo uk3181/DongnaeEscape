@@ -5,7 +5,7 @@ import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.WebServlet;
 import java.io.*;
 
-// 관리자용 페이지를 구성하는 메소드
+// 관리자용 페이지를 구성하는 컨트롤러
 @WebServlet("/admin")
 public class AdminController extends HttpServlet {
 	@Override
