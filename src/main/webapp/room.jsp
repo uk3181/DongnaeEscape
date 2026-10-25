@@ -1,4 +1,4 @@
-<!-- 각 방의 모습을 구현함. -->
+<!-- 각 방의 모습을 구성하는 페이지 -->
 <!-- 방 안에는 5개의 클릭 가능한 오브젝트가 존재함. -->
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
