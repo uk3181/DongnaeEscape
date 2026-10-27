@@ -238,15 +238,15 @@ DongnaeEscape/
 ## BGM
 | 곡명 | 사용 위치 | 제작자 | 출처 |
 | --- | ------ | ----- | --- |
-| Into the Magic World! | Main Theme | JUK(정재욱) | - |
-| ひとかけら Piece | Chat Theme | nojisuma | - |
-| Calm Guitar No Copyright | Select Room Theme | LiteSaturation(AI Agent) | - |
-| Reverie | Room1 | JUK(정재욱) | - |
-| Dance of the Little Princess | Room2 | JUK(정재욱) | - |
-| Longing in My Memory | Room3 | JUK(정재욱) | - |
-| In The Pouring Stars | Room4 | JUK(정재욱) | - |
-| Who Are You | Ending1 | MondayHopes | - |
-| So So Sad (Sad Meme Music) | Ending2 | Tomas_Herudek | - |
+| Into the Magic World! | Main Theme | JUK(정재욱) | [YouTube](https://youtu.be/KAW_2zN3e0M) |
+| ひとかけら Piece | Chat Theme | nojisuma | [Pixabay](https://pixabay.com/da/music/omgivende-ひとかけら-piece-245398/) |
+| Calm Guitar No Copyright | Select Room Theme | LiteSaturation(AI Agent) | [Pixabay](https://pixabay.com/music/solo-guitar-calm-guitar-no-copyright-557433/) |
+| Reverie | Room1 | JUK(정재욱) | [YouTube](https://youtu.be/otP7A9mVjW4) |
+| Dance of the Little Princess | Room2 | JUK(정재욱) | [YouTube](https://youtu.be/Njx9X_uktLg) |
+| Longing in My Memory | Room3 | JUK(정재욱) | [YouTube](https://youtu.be/FKJymALcWgY) |
+| In The Pouring Stars | Room4 | JUK(정재욱) | [YouTube](https://open.spotify.com/intl-ko/track/3SkVMZcyrXsAPGxGyn8yKL?si=853b522f17c746b4) |
+| Who Are You | Ending1 | MondayHopes | [Pixabay](https://pixabay.com/music/introoutro-who-are-you-8088/) |
+| So So Sad (Sad Meme Music) | Ending2 | Tomas_Herudek | [Pixabay](https://pixabay.com/music/main-title-so-so-sad-sad-meme-music-232027/) |
 
 ## 크레딧
 | 역할 | 이름 |
