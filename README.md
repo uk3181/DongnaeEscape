@@ -25,21 +25,27 @@
 
 ## 게임 진행 방식
 **1. 1365 ID 입력 및 게임 시작**<br>
+<img width="1352" height="756" alt="main_theme_screenshot" src="https://github.com/user-attachments/assets/ab9b0e7c-7f74-42ec-bb45-a002b7255c64" /><br>
 <br>
 **2. 각 방 입장**<br>
 게임에는 총 4개의 방이 존재한다. 각 방의 이름은 동래읍성, 동래시장, 온천천, 자원봉사센터인데, 4번째 방의 이름은 1~3번째 방의 모든 오브젝트를 해결하기 전까지는 UNKNOWN으로 표시가 되어 있다.<br>
+<img width="1352" height="756" alt="select_room_screenshot" src="https://github.com/user-attachments/assets/0db33787-b8b2-4ac2-b100-472aa0a495fa" /><br>
 <br>
 **3. 각 오브젝트 클릭**<br>
 각 방에는 5개의 오브젝트가 존재한다. 각 오브젝트를 클릭하기 전 게임 진행에 필요한 정보를 수집해야 한다.<br>
+<img width="1352" height="756" alt="room_screenshot" src="https://github.com/user-attachments/assets/b71c3e90-9b3f-4b54-b315-0e08082a6a86" /><br>
 <br>
 **4. 오브젝트에 해당하는 문제 해결**<br>
 각 오브젝트를 클릭하면 봉사자가 해결해야 할 문제가 주어진다. 4지 선다 형식 또는 OX퀴즈 형식으로 구성되어 있으며, 문제를 틀릴 때마다 게임 진행에 남은 시간은 30초 감소한다. 힌트를 조회할 수 있으나 조회할 시 남은 시간은 1분 감소한다.<br>
+<img width="1352" height="756" alt="problem_set_screenshot" src="https://github.com/user-attachments/assets/14481b4e-80db-40cb-b7c1-890e51373f2a" /><br>
 <br>
 **5. 최종 문제 해결**
 4개의 각 방에 있는 모든 오브젝트에 대응하는 문제를 해결한 후, 마지막 문제를 해결해야 한다. 정답은 "자원봉사"이며, 이 역시 틀린 답안을 입력할 경우 게임 진행에 남은 시간은 30초 감소한다.<br>
+<img width="1352" height="756" alt="input_answer_screenshot" src="https://github.com/user-attachments/assets/97380012-0aa9-40f0-938a-e649264474ac" /><br>
 <br>
 **6. 엔딩**<br>
-게임 성공 여부를 확인할 수 있다. 최종 문제까지 해결을 완료해야 게임에 성공하며, 시간 초과일 경우 게임에 실패한다.
+게임 성공 여부를 확인할 수 있다. 최종 문제까지 해결을 완료해야 게임에 성공하며, 시간 초과일 경우 게임에 실패한다.<br>
+<img width="1352" height="756" alt="ending_screenshot" src="https://github.com/user-attachments/assets/fa0e5d3b-db6d-48ca-84a1-1d32ca27e714" /><br>
 
 ## 주요 게임 시스템
 | 기능 | 설명 |
