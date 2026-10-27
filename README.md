@@ -71,7 +71,7 @@
 
 ## 배포 환경
 - **Hosting**: AWS EC2
-- **URL**: 봉사자용(dongnae-escape.kro.kr), 관리자용(dongnae-escape.kro.kr/admin)
+- **URL**: 봉사자용(http://dongnae-escape.kro.kr), 관리자용(http://dongnae-escape.kro.kr/admin)
 
 ## 프로젝트 구조
 ```
