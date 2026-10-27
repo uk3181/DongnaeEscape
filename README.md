@@ -232,7 +232,30 @@ DongnaeEscape/
 ## 개발팀
 | 이름 | GitHub | 담당 역할 |
 | --- | ------ | ------ |
-| 정재욱 | [@uk3181](https://github.com/uk3181) | JAVA, HTML, JavaScript 대부분(admin.js, bgm_audio.js, chat.js, main_theme.js, problem_set.js, session_storage.js, sfx_manager.js, sound_button.js, timer.js), SQL 개발 |
+| 정재욱 | [@uk3181](https://github.com/uk3181) | JAVA, HTML, JavaScript 대부분(admin.js, bgm_audio.js, chat.js, main_theme.js, problem_set.js, session_storage_manager.js, sfx_manager.js, sound_button.js, timer.js), SQL 개발 |
+| AI Agent | - | CSS, JavaScript 일부(main_theme.js, problem_set.js, screen_manager.js, timer.js) 개발 |
+
+## BGM
+| 곡명 | 사용 위치 | 제작자 | 출처 |
+| --- | ------ | ----- | --- |
+| Into the Magic World! | Main Theme | JUK(정재욱) | - |
+| ひとかけら Piece | Chat Theme | nojisuma | - |
+| Calm Guitar No Copyright | Select Room Theme | LiteSaturation(AI Agent) | - |
+| Reverie | Room1 | JUK(정재욱) | - |
+| Dance of the Little Princess | Room2 | JUK(정재욱) | - |
+| Longing in My Memory | Room3 | JUK(정재욱) | - |
+| In The Pouring Stars | Room4 | JUK(정재욱) | - |
+| Who Are You | Ending1 | MondayHopes | - |
+| So So Sad (Sad Meme Music) | Ending2 | Tomas_Herudek | - |
+
+## 크레딧
+| 역할 | 이름 |
+| --- | --- |
+| Game Design | 정재욱, AI Agent |
+| Programming | 정재욱 |
+| Art | Pixabay, AI Agent |
+| Audio | JUK(정재욱), nojisuma, MondayHopes, Tomas_Herudek, AI Agent |
+| Writing | 동래구자원봉사센터 |
 
 ## 라이선스
 Copyright © 2026 DongnaeEscape. All rights reserved.<br>
