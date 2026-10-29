@@ -69,7 +69,8 @@
 - **Server**: Apache Tomcat
 - **Platform**: 웹 애플리케이션
 
-## 데이터베이스 설계 (ERD)
+## 시스템 분석 및 설계
+### 데이터베이스 설계 (ERD)
 본 프로젝트의 데이터베이스 구조와 엔터티 간 관계를 나타낸 ERD이다. Oracle SQL을 사용하여 플레이어 정보, 문제 데이터, 채팅 데이터를 관리한다.<br>
 <br>
 **1. 논리 ERD**<br>
@@ -77,6 +78,14 @@
 <br>
 **2. 물리 ERD**<br>
 <img width="827" height="183" alt="물리 ERD" src="https://github.com/user-attachments/assets/404d872f-4bcd-4f2d-a2eb-96a57f1c5035" /><br>
+<br>
+### 시퀀스 다이어그램
+### 활동 다이어그램
+**1. 게임 플레이 활동 다이어그램**<br>
+<img width="630" height="1282" alt="activity diagram - 게임 플레이" src="https://github.com/user-attachments/assets/4ea9e2dc-748d-4403-af9a-bb50014bd57a" /><br>
+<br>
+**2. 관리자 업무 활동 다이어그램**<br>
+### 클래스 다이어그램
 
 ## 배포 환경
 - **Hosting**: AWS EC2
