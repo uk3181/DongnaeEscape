@@ -69,6 +69,15 @@
 - **Server**: Apache Tomcat
 - **Platform**: 웹 애플리케이션
 
+## 데이터베이스 설계 (ERD)
+본 프로젝트의 데이터베이스 구조와 엔터티 간 관계를 나타낸 ERD이다. Oracle SQL을 사용하여 플레이어 정보, 문제 데이터, 채팅 데이터를 관리한다.<br>
+<br>
+**1. 논리 ERD**<br>
+<img width="653" height="163" alt="논리 ERD" src="https://github.com/user-attachments/assets/63dbadae-e3a0-4bad-a40e-3b75398132a5" /><br>
+<br>
+**2. 물리 ERD**<br>
+<img width="827" height="183" alt="물리 ERD" src="https://github.com/user-attachments/assets/404d872f-4bcd-4f2d-a2eb-96a57f1c5035" /><br>
+
 ## 배포 환경
 - **Hosting**: AWS EC2
 - **URL**: 봉사자용(http://dongnae-escape.kro.kr), 관리자용(http://dongnae-escape.kro.kr/admin)
