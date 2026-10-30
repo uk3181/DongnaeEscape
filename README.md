@@ -86,8 +86,9 @@
 <br>
 **2. 관리자 업무 활동 다이어그램**<br>
 - **대시보드 조회**<br>
-    <img width="602" height="637" alt="activity diagram - 관리자 업무 - 대시보드 조회" src="https://github.com/user-attachments/assets/10be5e98-aa24-4816-8241-432493fc3b0b" />
-- **사용자 조회**
+    <img width="602" height="637" alt="activity diagram - 관리자 업무 - 대시보드 조회" src="https://github.com/user-attachments/assets/10be5e98-aa24-4816-8241-432493fc3b0b" /><br>
+- **사용자 조회**<br>
+    <img width="612" height="577" alt="activity diagram - 관리자 업무 - 사용자 조회" src="https://github.com/user-attachments/assets/ed9f0fa7-7bac-4b1c-972a-a4e1413b1ec3" /><br>
 - **플레이 기록 조회**
 - **게임 통계 조회**
 ### 클래스 다이어그램
