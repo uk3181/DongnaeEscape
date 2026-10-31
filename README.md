@@ -91,7 +91,8 @@
     <img width="612" height="577" alt="activity diagram - 관리자 업무 - 사용자 조회" src="https://github.com/user-attachments/assets/ed9f0fa7-7bac-4b1c-972a-a4e1413b1ec3" /><br>
 - **플레이 기록 조회**<br>
     <img width="912" height="1007" alt="activity diagram - 관리자 업무 - 플레이 기록 조회" src="https://github.com/user-attachments/assets/da94c6f7-05b0-4548-a6a1-5737ac83bfd2" /><br>
-- **게임 통계 조회**
+- **게임 통계 조회**<br>
+    <img width="602" height="742" alt="activity diagram - 게임 통계 조회" src="https://github.com/user-attachments/assets/da6f2f71-7146-4f00-af8b-7a0dd5f6ef17" /><br>
 ### 클래스 다이어그램
 
 ## 배포 환경
