@@ -94,6 +94,10 @@
 - **게임 통계 조회**<br>
     <img width="602" height="742" alt="activity diagram - 게임 통계 조회" src="https://github.com/user-attachments/assets/da6f2f71-7146-4f00-af8b-7a0dd5f6ef17" /><br>
 ### 클래스 다이어그램
+**1. 게임 플레이 클래스 다이어그램**<br>
+<img width="2082" height="1682" alt="class diagram - 게임 플레이" src="https://github.com/user-attachments/assets/2ec15ae9-7e7b-4d92-af46-2937717252ad" /><br>
+<br>
+**2. 관리자 업무 클래스 다이어그램**<br>
 
 ## 배포 환경
 - **Hosting**: AWS EC2
