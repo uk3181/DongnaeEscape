@@ -98,6 +98,14 @@
 <img width="2082" height="1682" alt="class diagram - 게임 플레이" src="https://github.com/user-attachments/assets/2ec15ae9-7e7b-4d92-af46-2937717252ad" /><br>
 <br>
 **2. 관리자 업무 클래스 다이어그램**<br>
+- **대시보드 조회**<br>
+    <img width="802" height="762" alt="class diagram - 관리자 업무 - 대시보드 조회" src="https://github.com/user-attachments/assets/fc793602-7b09-45cc-9892-ed3f3ec49973" /><br>
+- **사용자 조회**<br>
+    <img width="802" height="762" alt="class diagram - 관리자 업무 - 사용자 조회" src="https://github.com/user-attachments/assets/29796a4e-8251-48bf-9b1f-a38ca5f82e97" /><br>
+- **플레이 기록 조회**<br>
+    <img width="802" height="762" alt="class diagram - 관리자 업무 - 플레이 기록 조회" src="https://github.com/user-attachments/assets/b3d21818-e1a7-4d0e-bd19-b87c72a094c7" /><br>
+- **게임 통계 조회**<br>
+<img width="822" height="762" alt="class diagram - 관리자 업무 - 게임 통계 조회" src="https://github.com/user-attachments/assets/9b030f3e-4820-4a4f-9be3-d510a374b215" /><br>
 
 ## 배포 환경
 - **Hosting**: AWS EC2
