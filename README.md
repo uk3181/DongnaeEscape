@@ -26,7 +26,7 @@
 - 대시보드 조회: 게임 이용 현황(전체 사용자 수, 게임 성공 사용자 수, 게임 실패 사용자 수, 최근 접속 사용자 10명, 사용자별 최근 게임 기록)을 조회할 수 있다.
 - 사용자 조회: 1365에 가입되어 있는 ID를 바탕으로 사용자별 게임 진행 상황(게임 성공 여부, 접속 시간, 종료 시간, 최근 마지막 해결 방, 최근 마지막 해결 오브젝트 등)을 조회할 수 있다.
 - 플레이 기록 조회: 최근 50명 사용자들의 플레이 기록(접속 시간, 마지막 해결 방, 마지막 해결 오브젝트, 게임 성공 여부, 이해도)을 조회할 수 있다. 필요할 경우 ID별·게임 성공 여부별로 결과를 필터링할 수 있다.
-- 게임 통계 조회: 전체 사용자들의 게임 플레이 기록의 통계를 조회할 수 있다. 대시보드에 보이는 항목보다 더 세부적인 정보(방별 해결 현황, 오브젝트별 해결 현황 등)가 확인 가능하다.
+- 플레이 통계 조회: 전체 사용자들의 게임 플레이 기록의 통계를 조회할 수 있다. 대시보드에 보이는 항목보다 더 세부적인 정보(방별 해결 현황, 오브젝트별 해결 현황 등)가 확인 가능하다.
 
 ## 게임 진행 방식
 **1. 1365 ID 입력 및 게임 시작**<br>
@@ -88,7 +88,7 @@
 <img width="981" height="1227" alt="sequence diagram - 관리자 업무 - 사용자 조회" src="https://github.com/user-attachments/assets/70dc7eaa-6507-4ce1-b97b-6a082a7f84a1" /><br>
 - **플레이 기록 조회**<br>
     <img width="981" height="2037" alt="sequence diagram - 관리자 업무 - 플레이 기록 조회" src="https://github.com/user-attachments/assets/a3592732-cd9a-4975-8f14-9736c400fc3c" /><br>
-- **게임 통계 조회**<br>
+- **플레이 통계 조회**<br>
     <img width="981" height="1357" alt="sequence diagram - 관리자 업무 - 게임 통계 조회" src="https://github.com/user-attachments/assets/ba1bace9-a8b5-4cb7-b2e3-85e8d16752d3" /><br>
 ### 활동 다이어그램
 **1. 게임 플레이 활동 다이어그램**<br>
@@ -101,7 +101,7 @@
     <img width="612" height="577" alt="activity diagram - 관리자 업무 - 사용자 조회" src="https://github.com/user-attachments/assets/ec3e780c-6d34-4ba8-9e5b-06b62ba30998" /><br>
 - **플레이 기록 조회**<br>
     <img width="912" height="1007" alt="activity diagram - 관리자 업무 - 플레이 기록 조회" src="https://github.com/user-attachments/assets/da94c6f7-05b0-4548-a6a1-5737ac83bfd2" /><br>
-- **게임 통계 조회**<br>
+- **플레이 통계 조회**<br>
     <img width="602" height="742" alt="activity diagram - 게임 통계 조회" src="https://github.com/user-attachments/assets/da6f2f71-7146-4f00-af8b-7a0dd5f6ef17" /><br>
 ### 클래스 다이어그램
 **1. 게임 플레이 클래스 다이어그램**<br>
@@ -114,7 +114,7 @@
     <img width="802" height="762" alt="class diagram - 관리자 업무 - 사용자 조회" src="https://github.com/user-attachments/assets/29796a4e-8251-48bf-9b1f-a38ca5f82e97" /><br>
 - **플레이 기록 조회**<br>
     <img width="802" height="762" alt="class diagram - 관리자 업무 - 플레이 기록 조회" src="https://github.com/user-attachments/assets/b3d21818-e1a7-4d0e-bd19-b87c72a094c7" /><br>
-- **게임 통계 조회**<br>
+- **플레이 통계 조회**<br>
 <img width="822" height="762" alt="class diagram - 관리자 업무 - 게임 통계 조회" src="https://github.com/user-attachments/assets/9b030f3e-4820-4a4f-9be3-d510a374b215" /><br>
 
 ## 배포 환경
