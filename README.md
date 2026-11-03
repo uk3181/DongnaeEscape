@@ -80,6 +80,13 @@
 <img width="827" height="183" alt="물리 ERD" src="https://github.com/user-attachments/assets/404d872f-4bcd-4f2d-a2eb-96a57f1c5035" /><br>
 <br>
 ### 시퀀스 다이어그램
+**1. 게임 플레이 시퀀스 다이어그램**
+**2. 관리자 업무 시퀀스 다이어그램**
+- **대시보드 조회**<br>
+    <img width="946" height="1407" alt="sequence diagram - 관리자 업무 - 대시보드 조회" src="https://github.com/user-attachments/assets/19bd854e-f61d-4bec-941b-f68482b12097" /><br>
+- **사용자 조회**<br>
+- **플레이 기록 조회**<br>
+- **게임 통계 조회**<br>
 ### 활동 다이어그램
 **1. 게임 플레이 활동 다이어그램**<br>
 <img width="630" height="1282" alt="activity diagram - 게임 플레이" src="https://github.com/user-attachments/assets/4ea9e2dc-748d-4403-af9a-bb50014bd57a" /><br>
