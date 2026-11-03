@@ -102,9 +102,16 @@ public class PlayStatisticsController extends HttpServlet implements PlayStatist
 				}
 			}
 		}
-		averageComprehension /= totalPlayers.size();
+		if (totalPlayers.isEmpty())
+			averageComprehension = 0;
+		else
+			averageComprehension /= totalPlayers.size();
 		// 성공률
-		float successfulRate = ((float)successfulCount / totalPlayerCount) * 100;
+		float successfulRate;
+		if (totalPlayers.isEmpty())
+			successfulRate = 0;
+		else
+			successfulRate = ((float)successfulCount / totalPlayerCount) * 100;
 		
 		statistics.put("totalPlayerCount", totalPlayerCount);
 		statistics.put("successfulCount", successfulCount);
