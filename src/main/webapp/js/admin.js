@@ -17,7 +17,7 @@ class MenuButton {
 					case "플레이 기록":
 						analysisFrame.src = "search-play-records";
 						break;
-					case "게임 통계":
+					case "플레이 통계":
 						analysisFrame.src = "play-statistics";
 						break;
 				}
