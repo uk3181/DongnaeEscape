@@ -86,6 +86,7 @@
     <img width="946" height="1407" alt="sequence diagram - 관리자 업무 - 대시보드 조회" src="https://github.com/user-attachments/assets/19bd854e-f61d-4bec-941b-f68482b12097" /><br>
 - **사용자 조회**<br>
 - **플레이 기록 조회**<br>
+    <img width="981" height="2037" alt="sequence diagram - 관리자 업무 - 플레이 기록 조회" src="https://github.com/user-attachments/assets/a3592732-cd9a-4975-8f14-9736c400fc3c" /><br>
 - **게임 통계 조회**<br>
 ### 활동 다이어그램
 **1. 게임 플레이 활동 다이어그램**<br>
