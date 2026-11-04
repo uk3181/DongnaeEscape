@@ -102,7 +102,7 @@
 - **플레이 기록 조회**<br>
     <img width="912" height="1007" alt="activity diagram - 관리자 업무 - 플레이 기록 조회" src="https://github.com/user-attachments/assets/da94c6f7-05b0-4548-a6a1-5737ac83bfd2" /><br>
 - **플레이 통계 조회**<br>
-    <img width="602" height="742" alt="activity diagram - 게임 통계 조회" src="https://github.com/user-attachments/assets/da6f2f71-7146-4f00-af8b-7a0dd5f6ef17" /><br>
+    <img width="602" height="757" alt="activity diagram - 관리자 업무 - 플레이 통계 조회" src="https://github.com/user-attachments/assets/97809001-695b-412f-87d2-53d0386e35bf" /><br>
 ### 클래스 다이어그램
 **1. 게임 플레이 클래스 다이어그램**<br>
 <img width="2082" height="1682" alt="class diagram - 게임 플레이" src="https://github.com/user-attachments/assets/2ec15ae9-7e7b-4d92-af46-2937717252ad" /><br>
