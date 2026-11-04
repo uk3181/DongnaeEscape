@@ -80,8 +80,10 @@
 ![](./docs/images/diagrams/erd_2.jpg)<br>
 <br>
 ### 시퀀스 다이어그램
-**1. 게임 플레이 시퀀스 다이어그램**
-**2. 관리자 업무 시퀀스 다이어그램**
+**1. 게임 플레이 시퀀스 다이어그램**<br>
+![](./docs/images/diagrams/sequence_diagram_1.jpg)<br>
+<br>
+**2. 관리자 업무 시퀀스 다이어그램**<br>
 - **대시보드 조회**<br>
 ![](./docs/images/diagrams/sequence_diagram_2.jpg)<br>
 - **사용자 조회**<br>
