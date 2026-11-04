@@ -83,13 +83,13 @@
 **1. 게임 플레이 시퀀스 다이어그램**
 **2. 관리자 업무 시퀀스 다이어그램**
 - **대시보드 조회**<br>
-    <img width="946" height="1407" alt="sequence diagram - 관리자 업무 - 대시보드 조회" src="https://github.com/user-attachments/assets/19bd854e-f61d-4bec-941b-f68482b12097" /><br>
+![](./docs/images/diagrams/sequence_diagram_2.jpg)<br>
 - **사용자 조회**<br>
-<img width="981" height="1227" alt="sequence diagram - 관리자 업무 - 사용자 조회" src="https://github.com/user-attachments/assets/70dc7eaa-6507-4ce1-b97b-6a082a7f84a1" /><br>
+![](./docs/images/diagrams/sequence_diagram_3.jpg)<br>
 - **플레이 기록 조회**<br>
-    <img width="981" height="2037" alt="sequence diagram - 관리자 업무 - 플레이 기록 조회" src="https://github.com/user-attachments/assets/a3592732-cd9a-4975-8f14-9736c400fc3c" /><br>
+![](./docs/images/diagrams/sequence_diagram_4.jpg)<br>
 - **플레이 통계 조회**<br>
-    <img width="981" height="1357" alt="sequence diagram - 관리자 업무 - 플레이 통계 조회" src="https://github.com/user-attachments/assets/987864c6-5815-428b-9ddd-8c9f58685d2c" /><br>
+![](./docs/images/diagrams/sequence_diagram_5.jpg)<br>
 ### 활동 다이어그램
 **1. 게임 플레이 활동 다이어그램**<br>
 <img width="630" height="1282" alt="activity diagram - 게임 플레이" src="https://github.com/user-attachments/assets/4ea9e2dc-748d-4403-af9a-bb50014bd57a" /><br>
