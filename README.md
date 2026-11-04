@@ -89,7 +89,7 @@
 - **플레이 기록 조회**<br>
     <img width="981" height="2037" alt="sequence diagram - 관리자 업무 - 플레이 기록 조회" src="https://github.com/user-attachments/assets/a3592732-cd9a-4975-8f14-9736c400fc3c" /><br>
 - **플레이 통계 조회**<br>
-    <img width="981" height="1357" alt="sequence diagram - 관리자 업무 - 게임 통계 조회" src="https://github.com/user-attachments/assets/ba1bace9-a8b5-4cb7-b2e3-85e8d16752d3" /><br>
+    <img width="981" height="1357" alt="sequence diagram - 관리자 업무 - 플레이 통계 조회" src="https://github.com/user-attachments/assets/987864c6-5815-428b-9ddd-8c9f58685d2c" /><br>
 ### 활동 다이어그램
 **1. 게임 플레이 활동 다이어그램**<br>
 <img width="630" height="1282" alt="activity diagram - 게임 플레이" src="https://github.com/user-attachments/assets/4ea9e2dc-748d-4403-af9a-bb50014bd57a" /><br>
