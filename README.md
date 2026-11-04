@@ -95,17 +95,17 @@
 ### 7.1. 데이터베이스 설계 (ERD)
 본 프로젝트의 데이터베이스 구조와 엔터티 간 관계를 나타낸 ERD이다. Oracle SQL을 사용하여 플레이어 정보, 문제 데이터, 채팅 데이터를 관리한다.<br>
 <br>
-**7.1.1. 논리 ERD**<br>
+#### 7.1.1. 논리 ERD
 ![](./docs/images/diagrams/erd_1.jpg)<br>
 <br>
-**7.1.2. 물리 ERD**<br>
+#### 7.1.2. 물리 ERD
 ![](./docs/images/diagrams/erd_2.jpg)<br>
 <br>
 ### 7.2. 시퀀스 다이어그램
-**7.2.1. 게임 플레이 시퀀스 다이어그램**<br>
+#### 7.2.1. 게임 플레이 시퀀스 다이어그램
 ![](./docs/images/diagrams/sequence_diagram_1.jpg)<br>
 <br>
-**7.2.2. 관리자 업무 시퀀스 다이어그램**<br>
+#### 7.2.2. 관리자 업무 시퀀스 다이어그램
 - **대시보드 조회**<br>
 ![](./docs/images/diagrams/sequence_diagram_2.jpg)<br>
 - **사용자 조회**<br>
@@ -115,10 +115,10 @@
 - **플레이 통계 조회**<br>
 ![](./docs/images/diagrams/sequence_diagram_5.jpg)<br>
 ### 7.3. 활동 다이어그램
-**7.3.1. 게임 플레이 활동 다이어그램**<br>
+#### 7.3.1. 게임 플레이 활동 다이어그램
 ![](./docs/images/diagrams/activity_diagram_1.jpg)<br>
 <br>
-**7.3.2. 관리자 업무 활동 다이어그램**<br>
+#### 7.3.2. 관리자 업무 활동 다이어그램
 - **대시보드 조회**<br>
 ![](./docs/images/diagrams/activity_diagram_2.jpg)<br>
 - **사용자 조회**<br>
@@ -128,10 +128,10 @@
 - **플레이 통계 조회**<br>
 ![](./docs/images/diagrams/activity_diagram_5.jpg)<br>
 ### 7.4. 클래스 다이어그램
-**7.4.1. 게임 플레이 클래스 다이어그램**<br>
+#### 7.4.1. 게임 플레이 클래스 다이어그램
 ![](./docs/images/diagrams/class_diagram_1.jpg)<br>
 <br>
-**7.4.2. 관리자 업무 클래스 다이어그램**<br>
+#### 7.4.2. 관리자 업무 클래스 다이어그램
 - **대시보드 조회**<br>
 ![](./docs/images/diagrams/class_diagram_2.jpg)<br>
 - **사용자 조회**<br>
