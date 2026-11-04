@@ -126,6 +126,33 @@
 ## 프로젝트 구조
 ```
 DongnaeEscape/
+├── docs/ # README.md에 사용될 항목
+│   └── images/ # 이미지
+│       ├── diagrams/ # 다이어그램
+│       │   ├── activity_diagram_1.jpg # 게임 플레이 활동 다이어그램
+│       │   ├── activity_diagram_2.jpg # 관리자 업무 - 대시보드 조회 활동 다이어그램
+│       │   ├── activity_diagram_3.jpg # 관리자 업무 - 사용자 조회 활동 다이어그램
+│       │   ├── activity_diagram_4.jpg # 관리자 업무 - 플레이 기록 조회 활동 다이어그램
+│       │   ├── activity_diagram_5.jpg # 관리자 업무 - 플레이 통계 조회 활동 다이어그램
+│       │   ├── class_diagram_1.jpg # 게임 플레이 클래스 다이어그램
+│       │   ├── class_diagram_2.jpg # 관리자 업무 - 대시보드 조회 클래스 다이어그램
+│       │   ├── class_diagram_3.jpg # 관리자 업무 - 사용자 조회 클래스 다이어그램
+│       │   ├── class_diagram_4.jpg # 관리자 업무 - 플레이 기록 조회 클래스 다이어그램
+│       │   ├── class_diagram_5.jpg # 관리자 업무 - 플레이 통계 조회 클래스 다이어그램
+│       │   ├── erd_1.jpg # 논리 ERD
+│       │   ├── erd_2.jpg # 물리 ERD
+│       │   ├── sequence_diagram_1.jpg # 게임 플레이 시퀀스 다이어그램
+│       │   ├── sequence_diagram_2.jpg # 관리자 업무 - 대시보드 조회 시퀀스 다이어그램
+│       │   ├── sequence_diagram_3.jpg # 관리자 업무 - 사용자 조회 시퀀스 다이어그램
+│       │   ├── sequence_diagram_4.jpg # 관리자 업무 - 플레이 기록 조회 시퀀스 다이어그램
+│       │   └── sequence_diagram_5.jpg # 관리자 업무 - 플레이 통계 조회 시퀀스 다이어그램
+│       └── screenshots/ # 스크린샷
+│           ├── ending_screenshot.jpg # 엔딩 스크린샷
+│           ├── input_answer_screenshot.jpg # 최종 문제 해결 스크린샷
+│           ├── main_theme_screenshot.jpg # 1365 ID 입력 및 게임 시작 스크린샷
+│           ├── problem_set_screenshot.jpg # 오브젝트에 해당하는 문제 해결 스크린샷
+│           ├── room_screenshot.jpg # 각 오브젝트 클릭 스크린샷
+│           └── select_rooms_screenshot.jpg # 각 방 입장 스크린샷
 ├── src/
 │   └── main/
 │       ├── java/ # JAVA 코드
