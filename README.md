@@ -92,17 +92,17 @@
 ![](./docs/images/diagrams/sequence_diagram_5.jpg)<br>
 ### 활동 다이어그램
 **1. 게임 플레이 활동 다이어그램**<br>
-<img width="630" height="1282" alt="activity diagram - 게임 플레이" src="https://github.com/user-attachments/assets/4ea9e2dc-748d-4403-af9a-bb50014bd57a" /><br>
+![](./docs/images/diagrams/activity_diagram_1.jpg)<br>
 <br>
 **2. 관리자 업무 활동 다이어그램**<br>
 - **대시보드 조회**<br>
-    <img width="602" height="637" alt="activity diagram - 관리자 업무 - 대시보드 조회" src="https://github.com/user-attachments/assets/a8f70933-7091-4173-8012-73fb7c83f001" /><br>
+![](./docs/images/diagrams/activity_diagram_2.jpg)<br>
 - **사용자 조회**<br>
-    <img width="612" height="577" alt="activity diagram - 관리자 업무 - 사용자 조회" src="https://github.com/user-attachments/assets/ec3e780c-6d34-4ba8-9e5b-06b62ba30998" /><br>
+![](./docs/images/diagrams/activity_diagram_3.jpg)<br>
 - **플레이 기록 조회**<br>
-    <img width="912" height="1007" alt="activity diagram - 관리자 업무 - 플레이 기록 조회" src="https://github.com/user-attachments/assets/da94c6f7-05b0-4548-a6a1-5737ac83bfd2" /><br>
+![](./docs/images/diagrams/activity_diagram_4.jpg)<br>
 - **플레이 통계 조회**<br>
-    <img width="602" height="757" alt="activity diagram - 관리자 업무 - 플레이 통계 조회" src="https://github.com/user-attachments/assets/97809001-695b-412f-87d2-53d0386e35bf" /><br>
+![](./docs/images/diagrams/activity_diagram_5.jpg)<br>
 ### 클래스 다이어그램
 **1. 게임 플레이 클래스 다이어그램**<br>
 <img width="2082" height="1682" alt="class diagram - 게임 플레이" src="https://github.com/user-attachments/assets/2ec15ae9-7e7b-4d92-af46-2937717252ad" /><br>
